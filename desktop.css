@@ -1,0 +1,981 @@
+@media (min-width: 1440px) {
+    body {
+        width: 100% !important;
+        max-width: 1440px !important;
+        min-height: 2262px !important;
+        background: #FAFAFA !important;
+        position: relative !important;
+        margin: 0 auto !important;
+        overflow-x: hidden;
+    }
+
+    .header {
+        width: 100% !important;
+        height: 80px !important;
+        max-width: 1440px !important;
+        width: 100% !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+        /* gap: 225px !important; */
+        background: #FFFFFF !important;
+    }
+
+    .dropdown-toggle {
+        display: none !important;
+    }
+
+    .header-content {
+        max-width: 1110px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        /* Spreads Logo to Left, Nav to Center, Button to Right */
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        gap: 0;
+    }
+
+    .logo {
+        width: 139px !important;
+        height: 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        margin-right: 0 !important;
+    }
+
+    .logo img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .overlay,
+    .dropdown-toggle {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: flex !important;
+        /* FORCE IT TO SHOW */
+        position: static !important;
+        /* REMOVE THE FULL-SCREEN MOBILE OVERLAY */
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        /* This "pushes" the links to fill the center space */
+        transform: none !important;
+        /* ENSURES IT'S NOT SLID OFF SCREEN */
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row !important;
+        /* Move from vertical to horizontal */
+        align-items: center !important;
+        padding: 0 !important;
+        gap: 32px !important;
+        width: auto !important;
+        /*  height: 16px !important; */
+        flex: none;
+        order: 1;
+        /* Sits in the middle, after the Logo */
+        flex-grow: 0;
+        list-style: none !important;
+        margin: 0 auto !important;
+    }
+
+    .navigation li a {
+        font-family: 'Public Sans', sans-serif !important;
+        font-size: 14px !important;
+        color: #9597A5 !important;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .navigation li a:hover {
+        color: #2D314D !important;
+
+    }
+
+    .navigation li a {
+        width: auto !important;
+        height: 16px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 1.15 !important;
+        color: #9597A5 !important;
+        text-decoration: none;
+        display: inline-block !important;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        transition: color 0.3s ease;
+    }
+
+    .header-content .request-invite-btn {
+        width: 160px !important;
+        height: 44px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 8px 32px !important;
+        gap: 16px !important;
+        background: linear-gradient(216.99deg, #33D35E 8.35%, #2AB6D9 97.75%) !important;
+        border-radius: 22px !important;
+        border: none;
+        cursor: pointer;
+        flex: none;
+        order: 1;
+        /* Sits at the end of the header row */
+        flex-grow: 0;
+        margin: 0 !important;
+        color: #FFFFFF !important;
+        font-weight: 700;
+        font-family: 'Public Sans', sans-serif !important;
+        font-size: 14px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .hero-section {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        padding: 0 80px !important;
+        width: 100% !important;
+        max-width: 1440px !important;
+        height: 778px !important;
+        position: relative !important;
+        /* top: 80px !important; */
+        margin: 0 auto !important;
+        /* Centers the 1440px block */
+        overflow: visible !important;
+        /* don't cut the phones at the edges */
+    }
+
+    .hero-text-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        /* justify-content: center !important; */
+        align-items: flex-start !important;
+        /* Aligns title, paragraph, and button to the left */
+        padding: 0 !important;
+        gap: 24px !important;
+        width: 447px !important;
+        /* THE FIX: Breaks the 327px mobile lock */
+        height: auto !important;
+        max-width: 447px !important;
+        text-align: left !important;
+        z-index: 10;
+        margin: 0 !important;
+    }
+
+    .hero-image-container {
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
+        height: 700px !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .hero-image-container img {
+        width: auto !important;
+        height: 100% !important;
+        max-height: 900px !important;
+        content: url('images/Image\ \(1\).png') !important;
+        object-fit: contain !important;
+    }
+
+    .image-wrapper {
+        /* FIGMA MEASUREMENTS: 800px x 778px */
+        width: 800px !important;
+        max-width: 800px !important;
+        height: 778px !important;
+
+        width: 80%;
+        transform: translate(70px, -0px);
+
+        /* POSITIONING: This snaps the image to the far right edge */
+        position: absolute !important;
+        right: -120px !important;
+        /* THE FIX: Pushes the 'extra' space off-screen */
+        top: 90px !important;
+        /* Aligns the phones higher to overlap the bg */
+
+        margin: 0 !important;
+        /* Kills the centering that was causing the gap */
+        z-index: 2;
+    }
+
+    .image-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        /* Keeps your phones from stretching */
+    }
+
+    .hero-text-content h1 {
+        width: 447px !important;
+        height: 134px !important;
+        max-width: 447px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 300 !important;
+        font-size: 56px !important;
+        line-height: 120% !important;
+        letter-spacing: -1px !important;
+        color: #2D314D !important;
+        text-align: left !important;
+        margin: 0 !important;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .hero-text-content p {
+        width: 447px !important;
+        height: 84px !important;
+        /* Forces the exact 3-line wrap */
+        max-width: 447px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 155% !important;
+        letter-spacing: -0.25px !important;
+        color: #9597A5 !important;
+        text-align: left !important;
+        margin: 0 !important;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .hero-text-content
+
+    /* .request-invite-btn */
+    .btn-invite {
+        width: 160px !important;
+        height: 44px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 8px 32px !important;
+        gap: 16px !important;
+        border-radius: 22px !important;
+        border: none !important;
+        background: linear-gradient(216.99deg, #33D35E 8.35%, #2AB6D9 97.75%) !important;
+        color: #FFFFFF !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        cursor: pointer;
+        margin: 0 !important;
+        flex: none;
+        order: 2;
+        /* Sits 3rd, after the H1 and Paragraph */
+        align-self: flex-start !important;
+    }
+
+    .hero-text-content .request-invite-btn {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+
+    }
+
+    .request-invite-btn {
+        display: flex;
+    }
+
+    .hero-image-container {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: flex-start !important;
+        width: 800px !important;
+        height: 778px !important;
+        order: 1;
+        position: relative;
+        overflow: visible;
+    }
+
+    .hero-image-container img {
+        width: 800px !important;
+        height: 778px !important;
+        object-fit: contain !important;
+        display: block !important;
+        max-width: none !important;
+    }
+
+    .features-section {
+        width: 100% !important;
+        max-width: 1440px !important;
+        /* height: auto !important; */
+        min-height: auto !important;
+        height: 676px !important;
+        background: #F4F5F7 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        /* padding: 64px 165px 80px 165px !important; */
+        padding: 0 165px !important;
+        position: relative !important;
+        margin: 0 auto !important;
+        overflow: hidden;
+    }
+
+    .features-content-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 72px !important;
+        width: 100% !important;
+        /* max-width: 1116px !important;
+        height: 484px !important;
+        margin: 0 !important; */
+        max-width: 1110px !important;
+        margin: 0 !important;
+        height: auto !important;
+    }
+
+    .features-intro {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 32px !important;
+        width: 635px !important;
+        /* height: auto !important;
+        max-width: 635px !important; */
+        /* height: 136px !important; */
+        text-align: left !important;
+        margin: 0 !important;
+        width: 635px !important;
+        z-index: 5;
+    }
+
+    .features-intro h2 {
+        width: 635px !important;
+        height: 48px !important;
+        max-width: 635px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 300 !important;
+        font-size: 40px !important;
+        line-height: 120% !important;
+        letter-spacing: -0.75px !important;
+        color: #2D314D !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    .features-intro p {
+        margin: 0 !important;
+        width: 635px !important;
+        height: 56px !important;
+        max-width: 635px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 155% !important;
+        letter-spacing: -0.25px !important;
+        color: #9597A5 !important;
+        text-align: left !important;
+        display: block !important;
+        padding: 0 !important;
+        flex-basis: auto !important;
+    }
+
+    .features-content {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 32px !important;
+        width: 1116px !important;
+        max-width: 1116px !important;
+        height: 276px !important;
+        margin: 0 !important;
+    }
+
+    .feature-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .feature-description {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 24px !important;
+        width: 255px !important;
+        max-width: 255px !important;
+        height: 164px !important;
+        text-align: left !important;
+    }
+
+    .feature-card h3 {
+        width: 255px !important;
+        max-width: 255px !important;
+        height: 28px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 300 !important;
+        font-size: 24px !important;
+        line-height: 115% !important;
+        letter-spacing: -0.4px !important;
+        color: #2D314D !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    .feature-card p {
+        width: 255px !important;
+        max-width: 255px !important;
+        height: 112px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        line-height: 26px !important;
+        letter-spacing: -0.25px !important;
+        color: #9597A5 !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    .latest-articles {
+        width: 100% !important;
+        max-width: 1440px !important;
+        /* height: auto !important; */
+        background: #FAFAFA !important;
+        display: flex !important;
+        flex-direction: column !important;
+        /* justify-content: center !important; */
+        justify-content: flex-start !important;
+        /* Centers the 1110px content vertically */
+        align-items: center !important;
+        gap: 56px !important;
+        /* padding: 0px !important; */
+        padding: 80px 165px 40px 165px !important;
+        /* padding: 80px 165px !important; */
+        position: relative !important;
+        margin: 0 auto !important;
+        overflow: hidden;
+        min-width: auto !important;
+        margin-bottom: 0;
+
+        height: 660px !important;
+        min-height: 660px !important;
+    }
+
+    .articles-intro {
+        width: 1116px !important;
+        max-width: 1116px !important;
+        height: 48px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 0px !important;
+        gap: 10px !important;
+        /* margin: 0 auto !important; */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .articles-intro h2 {
+        text-align: left !important;
+        margin: 0 !important;
+        width: 1116px !important;
+        max-width: 1116px !important;
+        height: 48px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 300 !important;
+        font-size: 40px !important;
+        line-height: 120% !important;
+        letter-spacing: -0.75px !important;
+        color: #2D314D !important;
+    }
+
+    .articles-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        /* Align cards to the left brand line */
+        /* justify-content: center !important; */
+        align-items: center !important;
+        padding: 0px !important;
+        gap: 32px !important;
+        /* width: 1440px !important;
+            max-width: 1440px !important; */
+        width: 1116px !important;
+        max-width: 1116px !important;
+        /* height: 390px !important; */
+        height: auto !important;
+        margin: 0 auto !important;
+        flex: none;
+        order: 1;
+        /* Sits below the 'Latest Articles' title */
+        align-self: stretch;
+        flex-grow: 0;
+        margin-bottom: 0 !important;
+    }
+
+    .article-card {
+        width: 255px !important;
+        height: 390px !important;
+        max-width: 255px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        background: #FFFFFF !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        flex: none !important;
+        margin: 0 !important;
+    }
+
+    .article-image {
+        width: 255px !important;
+        height: 200px !important;
+        max-width: 255px !important;
+        border-radius: 5px 5px 0px 0px !important;
+        overflow: hidden !important;
+        flex: none !important;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .article-image img {
+        /* THE FIX: Makes the photo fill the 200px box perfectly */
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .article-text-content {
+        width: 255px !important;
+        max-width: 255px !important;
+        height: 190px !important;
+        background: #FFFFFF !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 24px 24px !important;
+        border-radius: 0px 0px 5px 5px !important;
+        flex: none !important;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .article-text-group {
+        width: 216px !important;
+        max-width: 216px !important;
+        height: 137px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 16px !important;
+        flex: none !important;
+        order: 0;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    .article-author {
+        width: 216px !important;
+        max-width: 216px !important;
+        height: 11px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 10px !important;
+        line-height: 115% !important;
+        color: #9597A5 !important;
+        text-align: left !important;
+        display: inline-block !important;
+        margin-bottom: 12px !important;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .article-text-group {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 8px !important;
+        width: 216px !important;
+        max-width: 216px !important;
+        height: 110px !important;
+        flex: none !important;
+        order: 1;
+        /* Sits after the Author name */
+        align-self: stretch;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    .article-text-group h3 {
+        width: 216px !important;
+        max-width: 216px !important;
+        height: 38px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 300 !important;
+        font-size: 16px !important;
+        line-height: 120% !important;
+        letter-spacing: -0.25px !important;
+        color: #2D314D !important;
+        text-align: left !important;
+        margin: 0 !important;
+        flex: none !important;
+        order: 0;
+        align-self: stretch;
+    }
+
+    .article-text-group p {
+        width: 216px !important;
+        max-width: 216px !important;
+        height: 64px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 115% !important;
+        letter-spacing: 0px !important;
+        color: #9597A5 !important;
+        text-align: left !important;
+        margin: 0 !important;
+        flex: none !important;
+        order: 1;
+        align-self: stretch;
+    }
+
+    footer {
+        width: 100% !important;
+        max-width: 1440px !important;
+        height: 191px !important;
+        min-height: 191px !important;
+        background: #2D314D !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0px !important;
+        position: relative !important;
+        margin: 0 auto !important;
+        isolation: isolate;
+        overflow: hidden;
+    }
+
+    .latest-articles {
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 0 !important;
+        /* Kills the 40px orange margin gap */
+        padding-bottom: 80px !important;
+    }
+
+    .footer-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        padding: 0px !important;
+        gap: 130px !important;
+        width: 1110px !important;
+        max-width: 1110px !important;
+        height: 96.35px !important;
+        margin: 0 auto !important;
+        z-index: 1;
+    }
+
+    .footer-brand {
+        width: 164px !important;
+        max-width: 164px !important;
+        height: 96.35px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0px !important;
+        gap: 56px !important;
+        margin: 0 !important;
+        flex: none !important;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .footer-socials {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 13px !important;
+        align-items: center !important;
+    }
+
+    .logo-icon-container img {
+        width: 153px !important;
+        height: 20.35px !important;
+        max-width: 153px !important;
+        display: block !important;
+        object-fit: contain !important;
+        margin: 0 !important;
+    }
+
+    .footer-logo-wrapper,
+    .logo-icon-container {
+        width: 153px !important;
+        height: 20.35px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .footer-decoration-path {
+        position: absolute !important;
+        left: 8.99% !important;
+        right: 80.78% !important;
+        top: 0% !important;
+        bottom: 79.55% !important;
+        background: linear-gradient(216.99deg, #33D35E 8.35%, #2AB6D9 97.75%) !important;
+        opacity: 0.15 !important;
+        mix-blend-mode: normal !important;
+        z-index: -1 !important;
+        /* Forces it BEHIND the logo and links */
+        pointer-events: none;
+    }
+
+    .footer-socials {
+        width: 164px !important;
+        max-width: 164px !important;
+        height: 20px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 0px !important;
+        gap: 16px !important;
+        flex: none !important;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 0 auto;
+    }
+
+    .footer-socials a img {
+        height: 20px !important;
+        width: auto !important;
+    }
+
+    .footer-socials a img,
+    .footer-socials a svg {
+        width: 20px !important;
+        height: 20px !important;
+        max-width: 20px !important;
+        filter: brightness(0) invert(1) !important;
+        transition: filter 0.3s ease !important;
+        flex: none !important;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .footer-socials a img:hover,
+    .footer-socials a svg:hover {
+        filter: invert(72%) sepia(91%) saturate(336%) hue-rotate(85deg) brightness(97%) contrast(92%) !important;
+    }
+
+    .footer-nav {
+        width: 352px !important;
+        max-width: 352px !important;
+        height: 96px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        /* THE FIX: Remove 'margin-left: 190px'. Use a smaller gap if needed */
+        margin: 0 !important;
+        margin-left: 96px;
+
+        /* THE FIX: Ensure the parent '.footer-container' is pushing it to the left */
+        justify-content: flex-start !important;
+        padding: 0px !important;
+        gap: 32px !important;
+        flex: none !important;
+        order: 1;
+    }
+
+    .footer-nav-col {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        column-gap: 32px !important;
+        row-gap: 12px !important;
+        width: 100% !important;
+        gap: 24px !important;
+        grid-auto-flow: column !important;
+        grid-template-rows: repeat(3, auto) !important;
+        /* gap: 16px 40px !important; */
+        align-items: start !important;
+        justify-items: start !important;
+        row-gap: 24px !important;
+        column-gap: 40px !important;
+    }
+
+    /* Ensure the container is spreading the columns correctly */
+    .footer-container {
+        justify-content: flex-start !important;
+        /* Forces Logo and Nav to the left */
+        gap: 130px !important;
+        /* THE GAP: This is the space between Socials and Links */
+    }
+
+    .footer-nav-col a {
+        width: auto !important;
+        display: block !important;
+        text-align: left !important;
+        width: 100%;
+        line-height: 1.5 !important;
+        display: inline-block !important;
+    }
+
+    .footer-nav-col a {
+        width: 160px !important;
+        max-width: 160px !important;
+        height: 16px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 115% !important;
+        color: #FFFFFF !important;
+        text-decoration: none !important;
+        display: block !important;
+        transition: color 0.3s ease !important;
+        flex: none !important;
+        order: 0;
+        margin: 0 !important;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .footer-actions {
+        width: 228px !important;
+        max-width: 228px !important;
+        height: 84px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        padding: 0px !important;
+        gap: 24px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        flex: none !important;
+        order: 1;
+    }
+
+    footer .request-invite-btn {
+        width: 160px !important;
+        height: 44px !important;
+        max-width: 160px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 8px 32px !important;
+        gap: 16px !important;
+        background: linear-gradient(216.99deg, #33D35E 8.35%, #2AB6D9 97.75%) !important;
+        border-radius: 22px !important;
+        border: none !important;
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        cursor: pointer !important;
+        transition: opacity 0.3s ease !important;
+        flex: none !important;
+        order: 0;
+        margin: 0 !important;
+    }
+
+    footer .request-invite-btn {
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        line-height: 200% !important;
+        color: #FFFFFF !important;
+        width: 96px !important;
+        height: 28px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        flex: none !important;
+        order: 0;
+        flex-grow: 0;
+        min-width: 160px !important;
+        min-height: 44px !important;
+    }
+
+    footer .request-invite-btn:hover {
+        opacity: 0.7 !important;
+    }
+
+    .copyright {
+        width: 228px !important;
+        max-width: 228px !important;
+        height: 16px !important;
+        font-family: 'Public Sans', sans-serif !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 115% !important;
+        color: #FFFFFF !important;
+        opacity: 0.5 !important;
+        text-align: right !important;
+        mix-blend-mode: normal !important;
+        flex: none !important;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 0 !important;
+    }
+}

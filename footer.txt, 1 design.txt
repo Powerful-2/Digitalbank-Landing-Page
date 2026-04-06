@@ -1,0 +1,54 @@
+<footer>
+  <div class="container">
+    <div class="grid-footer">
+
+      <!-- column 1 -->
+      <div class="footer-item">
+        <div class="logo">
+          <img src="images/logo-light.svg" alt="">
+        </div>
+
+        <div class="social-media-icons">
+          <div class="social-icon">
+            <img src="images/icon-facebook.svg" alt="Facebook">
+          </div>
+          <div class="social-icon">
+            <img src="images/icon-youtube.svg" alt="Youtube">
+          </div>
+          <div class="social-icon">
+            <img src="images/icon-twitter.svg" alt="Twitter">
+          </div>
+          <div class="social-icon">
+            <img src="images/icon-pinterest.svg" alt="Pinterest">
+          </div>
+          <div class="social-icon">
+            <img src="images/icon-instagram.svg" alt="Instagram">
+          </div>
+        </div>
+      </div>
+
+      <!-- column 2 -->
+      <div class="footer-links">
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact</a></p>
+        <p><a href="#">Blog</a></p>
+      </div>
+
+      <!-- column 3 -->
+      <div class="footer-links">
+        <p><a href="#">Careers</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+
+      <!-- column 4 -->
+      <div class="footer-links">
+        <button class="btn">
+          Request Invite
+        </button>
+        <p>©2025 Digitalbank. All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+
+  </footer>
