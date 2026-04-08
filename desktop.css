@@ -731,6 +731,8 @@
         height: 96.35px !important;
         margin: 0 auto !important;
         z-index: 1;
+        position:  relative !important;
+        top: 20px !important;
     }
 
     .footer-brand {
@@ -830,7 +832,8 @@
         height: 96px !important;
         display: flex !important;
         flex-direction: row !important;
-        align-items: center !important;
+        align-items: flex-start !important;
+        flex-direction: row;
 
         /* THE FIX: Remove 'margin-left: 190px'. Use a smaller gap if needed */
         margin: 0 !important;
@@ -839,7 +842,7 @@
         /* THE FIX: Ensure the parent '.footer-container' is pushing it to the left */
         justify-content: flex-start !important;
         padding: 0px !important;
-        gap: 32px !important;
+        gap: 30px !important;
         flex: none !important;
         order: 1;
     }
@@ -867,6 +870,13 @@
         gap: 130px !important;
         /* THE GAP: This is the space between Socials and Links */
     }
+
+        .footer-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            min-width: 160px;
+        }
 
     .footer-nav-col a {
         width: auto !important;
@@ -978,4 +988,33 @@
         flex-grow: 0;
         margin: 0 !important;
     }
+
+        .attribution {
+            padding: 40px 0 20px 0;
+        }
+
+    .sr-only {
+        position: absolute;
+        text-decoration: none;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+        @media screen and (min-width: 1440px) {
+            .header-content .request-invite-btn {
+                display: flex !important;
+                /* Show only on big screens */
+            }
+    
+            .dropdown-toggle {
+                display: none;
+                /* Hide the hamburger on big screens */
+            }
+        }
 }

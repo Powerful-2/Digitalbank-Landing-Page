@@ -70,6 +70,12 @@ body {
   box-sizing: border-box;
 }
 
+/* Hide the invite button on mobile header only */
+.header-content .request-invite-btn {
+  display: none;
+}
+
+
 .overlay {
   position: fixed;
   top: 64px;
@@ -133,7 +139,13 @@ body {
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
-  display: none;
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .mobile-menu {
@@ -197,14 +209,18 @@ body {
 }
 
 .hamburger-bar {
-  position: absolute;
+  position: static;
   width: 24px;
-  height: 1px;
+  height: 2px;
+  /* Increased to 2px for better visibility */
   background-color: #2D314D;
+  transform-origin: center;
   left: 0;
   transition: all 0.3s ease;
+  display: block;
 }
 
+/* Vertical slots for the 3 lines */
 .bar-1 {
   top: 0px;
 }
@@ -217,8 +233,20 @@ body {
   top: 10px;
 }
 
+/* .bar-1 {
+  top: 0px;
+}
+
+.bar-2 {
+  top: 5px;
+}
+
+.bar-3 {
+  top: 10px;
+} */
+
 /* Ensure the button is actually visible and has its 24px width */
-.dropdown-toggle {
+/* .dropdown-toggle {
   background: none;
   border: none;
   cursor: pointer;
@@ -229,7 +257,41 @@ body {
   align-items: center;
   position: relative;
   z-index: 1000;
-  /* justify-content: center; */
+  justify-content: center;
+} */
+
+.dropdown-toggle {
+  position: static !important;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 24px;
+  height: 24px;
+  /* Height must match the bottom bar position + height */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  /* Keeps it above the white header */
+}
+
+/* Styles when the button has the .open class */
+.dropdown-toggle.open .bar-1 {
+  transform: translateY(6px) rotate(45deg);
+  /* Adjust 6px based on your gap */
+}
+
+.dropdown-toggle.open .bar-2 {
+  opacity: 0;
+}
+
+.dropdown-toggle.open .bar-3 {
+  transform: translateY(-6px) rotate(-45deg);
+  /* Adjust -6px based on your gap */
 }
 
 .dropdown-toggle img {
@@ -1053,6 +1115,29 @@ footer {
   height: auto;
 }
 
+.footer-links-list {
+  list-style: none;
+  /* Removes bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* Keeps them stacked vertically */
+  gap: 12px;
+  /* Space between links */
+}
+
+.footer-links-list li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #31D35C;
+  /* Digitalbank Green */
+}
+
 .footer-nav-col a {
   display: block;
   margin-bottom: 16px;
@@ -1172,7 +1257,6 @@ footer {
   padding: 20px 0;
   width: 100%;
   background-color: #2D314D;
-  /* Matches your desktop background */
   color: #9597A5;
   /* Subtle gray brand color */
 
@@ -1204,45 +1288,15 @@ footer {
   font-weight: 700;
 }
  */
-/* TABLET STYLES (starts at 768px) */
-/* --- TABLET & DESKTOP --- */
-@media (min-width: 768px){
- /*  .main-container{
-    position: relative;
-    background: #FAFAFA;
-    width: 100%;
-    max-width: 768px;
-    height: 3573px;
-    margin: 0 auto;
-  }
 
-  .header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-   
-    top: 0;
-    width: 100%;
-    max-width: 768px;
-    z-index: 1000;
-    margin: 0 auto;
-    height: 64px;
-    padding: 24px 80px;
-  }
-
-  .header-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 608px;
-    height: 20.93px;
-    gap: 430px;
-    max-width: 100%;
-  } */
+ .icon--small {
+   width: 40px;
+   /* visual size */
+   height: 40px;
+   /* keeps image proportions consistent */
+   display: inline-block;
+   /* optional: ensures predictable layout */
+ }
 
   .dropdown-toggle{
     position: absolute;
@@ -1263,5 +1317,4 @@ footer {
     display: flex;
   }
   
-}
 
