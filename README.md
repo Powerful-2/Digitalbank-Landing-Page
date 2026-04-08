@@ -1,92 +1,132 @@
-# Frontend Mentor - Digitalbank landing page
+- Digitalbank Responsive Landing Page
 
-![Design preview for the Digitalbank landing page coding challenge](preview.jpg)
+- Developed by Prince Chinonso
+- A pixel-perfect, high-performance landing page built with a Mobile-First strategy. This project demonstrates advanced CSS positioning, responsive architecture (375px to 1440px), and clean JavaScript functionality.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+- The Technical Journey: Challenges & Solutions
+1. The "Invisible" Hamburger Icon (Mobile)
+The Challenge: The mobile menu icon wasn't appearing even though the code was present. The bars were stacking on top of each other or lacking a background color.
+The Resolution: I transitioned from a broken image tag to a custom-built CSS icon. By using position: relative on the button and position: absolute on three div bars with specific top offsets, I created a visible, scalable icon.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+The Proof:
+css
+.hamburger-bar {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  background-color: #2D314D;
+}
 
-Your users should be able to:
+.bar-2 { top: 5px; } 
+.bar-3 { top: 10px; } 
 
-- View the optimal layout for the site depending on their device's screen size
+2. The Header (Desktop 1440px)
+The Challenge: When switching to Desktop, the Logo, Links, and Button were all huddled together in a 327px box in the center, the links were hidden behind the button.
+The Resolution: I identified a Specificity Bug where the mobile class was overriding the desktop element. I fixed this by using .header-content with a max-width: 1110px and justify-content: space-between to force the items to the far edges of the 1440px bar.
+The Proof:
+css
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1110px;
+}
+
+3. The Hero Mockups: desktop
+The Challenge: The phone mockups were being cut off at the bottom or the side. They refused to overlap the background pattern and the "Features" section below.
+The Resolution: I tried the parent container by using overflow: visible and used negative positioning to pull the phones out of the hero section. This allowed the 778px tall image to bleed into the next section perfectly.
+
+The Proof:
+css
+.image-wrapper {
+  width: 800px;
+  height: 778px;
+  position: absolute !important;
+  right: -150px; 
+  top: -120px;
+}
+
+.hero-section { overflow: visible !important; } /* Stopped the clipping */
+Use code with caution.
+
+4. The Attribution Wrapping Bug
+The Challenge: On mobile screens, "Coded by Prince Chinonso" was breaking into two lines, making the footer look unprofessional.
+The Resolution: I implemented the white-space property to lock the text onto a single horizontal line regardless of screen width.
+
+The Proof:
+css
+.attribution {
+  font-size: 11px;
+  white-space: nowrap; 
+  text-align: center;
+}
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size: Tablets, Mobile & Desktop
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.jpg)
+![alt text](image-1.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+### Links
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: (https://github.com/Powerful-2/Digitalbank-Landing-Page)
+- Live Site URL: (https://powerful-2.github.io/Digitalbank-Landing-Page/)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## My process
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
+- Built with
+- Semantic HTML5 markup
+- CSS Custom Properties (Variables)
+- Flexbox for complex alignment
+- Mobile-first workflow
+- Vanilla JavaScript for menu toggling
+- Media Queries for 1440px Desktop optimization
 
-## Building your project
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Useful resources
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Frontend Mentor - The platform that provided the professional design mockups and project brief for this Digitalbank challenge.
+- A Complete Guide to Flexbox (CSS-Tricks) - This was my go-to reference for positioning the bank's feature cards and navigation items.
+- BEM Methodology Documentation - This helped me maintain a clean and scalable CSS structure by using the Block-Element-Modifier naming convention.
+- MDN Web Docs: Flexbox - An essential resource for understanding how the flex container and items interact, especially for mobile responsiveness.
+- Google Fonts - Used to import the specific typography required by the project's style guide.
+- Can I Use - I used this to double-check browser compatibility for newer CSS properties like gap in Flexbox
 
-## Deploying your project
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+## Author
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Website - (https://powerful-2.github.io/Digitalbank-Landing-Page/)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Powerful-2)
+- Twitter - (https://x.com/Koolprince0)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Create a custom `README.md`
+## Acknowledgments
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+I want to thank Tobi for the moral support and also showing me how to seperate my media queries instead of being in one file: style.css.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+He taught me to separate my CSS by creating a file named tab.css and desktop.css.
