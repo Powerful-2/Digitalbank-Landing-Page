@@ -121,7 +121,7 @@ Users should be able to:
 ## Author
 
 - Website - (https://powerful-2.github.io/Digitalbank-Landing-Page/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Powerful-2)
+- Frontend Mentor - (https://www.frontendmentor.io/profile/Powerful-2)
 - Twitter - (https://x.com/Koolprince0)
 
 
