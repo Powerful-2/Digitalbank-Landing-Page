@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>careers | Digitalbank</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tablet Styles (Only loads at 768px and up) -->
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 768px)">
+    <!-- Desktop Styles (Only loads at 1440px and up) -->
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
+            </div>
+    
+            <nav class="mobile-menu" id="mobile-menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+    
+            <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
+    
+            <!-- The Hamburger Button -->
+            <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="hamburger-bar bar-1"></span>
+                <span class="hamburger-bar bar-2"></span>
+                <span class="hamburger-bar bar-3"></span>
+            </button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <section class="careers section container">
+            <div class="careers__header">
+                <h1>Join the Team</h1>
+                <p>Help us build the future of digital banking. We’re looking for talented young people to join our global team.
+                </p>
+            </div>
+    
+            <div class="careers__list">
+                <!-- Job 1 -->
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Senior Frontend Developer</h3>
+                        <p>Engineering • Remote</p>
+                    </div>
+                    <button class="request-invite-btn">Apply Now</button>
+                </div>
+    
+                <!-- Job 2 -->
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>UI/UX Designer</h3>
+                        <p>Design • Lagos, Nigeria</p>
+                    </div>
+                    <button class="request-invite-btn">Apply Now</button>
+                </div>
+    
+                <!-- Job 3 -->
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Customer Success Manager</h3>
+                        <p>Operations • London, UK</p>
+                    </div>
+                    <button class="request-invite-btn">Apply Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+
+<script src="scripts.js"></script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Digitalbank</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tablet Styles (Only loads at 768px and up) -->
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 768px)">
+    <!-- Desktop Styles (Only loads at 1440px and up) -->
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
+            </div>
+    
+            <nav class="mobile-menu" id="mobile-menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+    
+            <!-- <form action="/invite" method="post">
+              <button type="submit" class="request-invite-btn">Request Invite</button>
+            </form> -->
+            <!-- Add id="inviteBtn" so your JavaScript can find it -->
+            <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
+    
+    
+            <!-- The Hamburger Button -->
+            <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="hamburger-bar bar-1"></span>
+                <span class="hamburger-bar bar-2"></span>
+                <span class="hamburger-bar bar-3"></span>
+            </button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- 1. MISSION SECTION (Reusing Hero-style layout) -->
+        <section class="mission section container">
+            <div class="mission__text">
+                <h1>Our Mission</h1>
+                <p>We’re on a journey to help you manage your finances better than ever before.</p>
+            </div>
+        </section>
+
+        <section class="vision section container">
+            <div class="vision__content">
+                <h2>Our Vision</h2>
+                <p>We envision a world where everyone has the tools to be financially free. By combining cutting-edge technology
+                    with human-centric design, we’re making that a reality.</p>
+            </div>
+        </section>
+
+        <!-- 3. HOW WE WORK (Short Explanation) -->
+        <section class="how-we-work section container">
+            <div class="how-we-work__content">
+                <h2>Why We're Different</h2>
+                <p>While traditional banks are stuck in the past with paperwork and hidden fees, we built Digitalbank from the
+                    ground up to be digital-first.</p>
+                <p>We don't have physical branches, which means we save money on rent and electricity—and we pass those savings
+                    directly to you through higher interest rates and lower fees.</p>
+            </div>
+        </section>
+
+
+    
+        <!-- 2. THE TEAM (New Grid) -->
+        <section class="team section container">
+            <h2>Meet the Team</h2>
+            <div class="team__grid">
+                <!-- Person 1 -->
+                <div class="team__card">
+                    <img src="images/image-confetti.jpg" alt="Founder" class="team__img">
+                    <h3>Ade Smith</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <!-- Add 2 more people here -->
+                <div class="team__card">
+                    <img src="images/image-restaurant.jpg" alt="Director" class="team__img">
+                    <h3>Wonderful Richard</h3>
+                    <p>Director</p>
+
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>

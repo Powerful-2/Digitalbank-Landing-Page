@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Digitalbank</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tablet Styles (Only loads at 768px and up) -->
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 768px)">
+    <!-- Desktop Styles (Only loads at 1440px and up) -->
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
+            </div>
+    
+            <nav class="mobile-menu" id="mobile-menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+    
+            <!-- <form action="/invite" method="post">
+                      <button type="submit" class="request-invite-btn">Request Invite</button>
+                    </form> -->
+            <!-- Add id="inviteBtn" so your JavaScript can find it -->
+            <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
+    
+    
+            <!-- The Hamburger Button -->
+            <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="hamburger-bar bar-1"></span>
+                <span class="hamburger-bar bar-2"></span>
+                <span class="hamburger-bar bar-3"></span>
+            </button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <div class="blog-search container">
+        <input type="text" id="blogSearch" placeholder="Search articles by title...">
+    </div>
+
+
+    <main>
+        <section class="blog-page section container">
+            <div class="blog-page__header">
+                <h1>Digitalbank Blog</h1>
+                <p>Insights, news, and guides for the modern saver.</p>
+            </div>
+    
+            <div class="blog-page__grid">
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <img src="./images/image-currency.jpg" alt="" class="blog-card__img">
+                    <div class="blog-card__content">
+                        <span class="blog-card__author">By Claire Robinson</span>
+                        <h3 class="blog-card__title">5 Ways to Save More This Month</h3>
+                        <p class="blog-card__excerpt">From micro-investing to automated budgeting, discover our top tips for
+                            financial growth.</p>
+                        <a href="#" class="blog-card__link">Read More</a>
+                    </div>
+                </article>
+    
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <img src="./images/globalization-of-digital-banking-UXDA.jpg" alt="" class="blog-card__img">
+                    <div class="blog-card__content">
+                        <span class="blog-card__author">By Wilson Hutton</span>
+                        <h3 class="blog-card__title">How Digital Banking is Changing the World</h3>
+                        <p class="blog-card__excerpt">Traditional banks are becoming a thing of the past. Here is why the
+                            world is going digital.</p>
+                        <a href="#" class="blog-card__link">Read More</a>
+                    </div>
+                </article>
+    
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <img src="./images/digital-banking-security.jpg" alt="Digital Security" class="blog-card__img">
+                    <div class="blog-card__content">
+                        <span class="blog-card__author">By Wilson Hutton</span>
+                        <h3 class="blog-card__title">Why Security is Our Number One Priority</h3>
+                        <p class="blog-card__excerpt">Learn about the bank-grade encryption we use to keep your money and
+                            data safe 24/7.</p>
+                        <a href="#" class="blog-card__link">Read More</a>
+                    </div>
+                </article>
+    
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <img src="./images/image-confetti.jpg" alt="" class="blog-card__img">
+                    <div class="blog-card__content">
+                        <span class="blog-card__author">By Claire Robinson</span>
+                        <h3 class="blog-card__title">Celebrating Our First Million Users</h3>
+                        <p class="blog-card__excerpt">We’ve reached a massive milestone! Read about our journey and what’s
+                            coming next.</p>
+                        <a href="#" class="blog-card__link">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

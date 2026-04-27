@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Digitalbank</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tablet Styles (Only loads at 768px and up) -->
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 768px)">
+    <!-- Desktop Styles (Only loads at 1440px and up) -->
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
+            </div>
+    
+            <nav class="mobile-menu" id="mobile-menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+    
+            <!-- <form action="/invite" method="post">
+                  <button type="submit" class="request-invite-btn">Request Invite</button>
+                </form> -->
+            <!-- Add id="inviteBtn" so your JavaScript can find it -->
+            <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
+    
+    
+            <!-- The Hamburger Button -->
+            <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                aria-controls="mobile-menu">
+                <span class="hamburger-bar bar-1"></span>
+                <span class="hamburger-bar bar-2"></span>
+                <span class="hamburger-bar bar-3"></span>
+            </button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <section class="contact section container">
+            <div class="contact__header">
+                <h1>Get In Touch</h1>
+                <p>Have a question? <br>We’d love to hear from you.</p>
+            </div>
+    
+            <form class="contact__form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <span class="error-message"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <span class="error-message"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="How can we help?" rows="5"></textarea>
+                    <span class="error-message"></span>
+                </div>
+    
+                <!-- <button type="submit" class="button">Send Message</button> -->
+                <button type="submit" class="request-invite-btn" id="submitBtn">Request Invite</button>
+
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

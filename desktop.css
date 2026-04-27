@@ -1017,4 +1017,12 @@
                 /* Hide the hamburger on big screens */
             }
         }
+
+                /* Blog Page Desktop Adjustment */
+                .blog-page__grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    /* Two columns */
+                    gap: 30px;
+                }
 }

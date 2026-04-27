@@ -42,3 +42,52 @@ if (inviteBtn) {
     // You can add an alert or modal logic here later
   });
 }
+
+// --- Contact Form Validation ---
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the page from refreshing
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        let isValid = true;
+
+        // Basic Validation
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields before requesting an invite.");
+            isValid = false;
+        } else if (!email.includes("@")) {
+            alert("Please enter a valid email address.");
+            isValid = false;
+        }
+
+        // Success Message
+        if (isValid) {
+            alert(`Thank you, ${name}! Your request has been sent.`);
+            contactForm.reset(); // Clears the form
+        }
+    });
+}
+
+// --- Blog Search Functionality ---
+const blogSearch = document.getElementById('blogSearch');
+const blogCards = document.querySelectorAll('.blog-card');
+
+if (blogSearch) {
+    blogSearch.addEventListener('keyup', (e) => {
+        const searchString = e.target.value.toLowerCase();
+
+        blogCards.forEach((card) => {
+            const title = card.querySelector('.blog-card__title').innerText.toLowerCase();
+            
+            if (title.includes(searchString)) {
+                card.style.display = 'block'; // Show if it matches
+            } else {
+                card.style.display = 'none';  // Hide if it doesn't match
+            }
+        });
+    });
+}
