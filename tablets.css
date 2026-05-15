@@ -898,3 +898,143 @@ body,
             /* Allows 2 cards per row */
     }
 }
+
+/* Tablet: from 768px up */
+@media (min-width: 768px) {
+    main {
+            display: block;
+        }
+    
+    .mission {
+        padding: 100px 60px;
+        text-align: center;
+        background-color: white;
+    }
+
+    .mission__text {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .mission__text h1 {
+        font-size: 42px;
+        margin-bottom: 24px;
+    }
+
+        .vision {
+            padding: 80px 60px;
+            text-align: center;
+            background-color: var(--neutral-very-light-gray);
+            /* Subtle contrast */
+        }
+    
+        .vision__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .vision__content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    
+        .vision__content p {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: left !important;
+        }
+
+    .mission,
+    .vision {
+        padding: 60px 24px !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .mission__text,
+    .vision__content {
+        max-width: 400px !important;
+        text-align: left !important;
+        margin: 0 auto !important; 
+    }
+
+    .mission__text h1,
+    .vision__content h2{
+        margin-bottom: 24px !important;
+        font-size: 36px !important;
+    }
+
+    .mission__text p,
+    .vision__content p {
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+        .mission__text h1,
+        .vision__content h2 {
+            margin-bottom: 20px;
+        }
+
+    .team__grid{
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        display: flex !important;
+        justify-content: center !important;
+            /* Allows cards to wrap to the next line */
+            gap: 30px !important;
+            width: 100% !important;
+    }
+
+    .team__card {
+        flex: 0 1 300px !important;
+        text-align: center !important;
+            /* Each card takes up roughly half the row */
+       /*  margin-bottom: 20px; */
+    }
+
+        .mission,
+        .vision {
+            display: inline-block;
+            /* Allows them to sit next to each other */
+            vertical-align: top;
+            width: 48%;
+            /* Each takes up nearly half the row */
+            padding: 60px 20px;
+            text-align: left;
+        }
+
+    .how-we-work{
+        padding: 100px 40px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .how-we-work__content{
+        /* The "Beautiful Colored Circle" Effect */
+        background: linear-gradient(135px, var(--primary-lime-green), var(--primary-bright-cyan));
+        padding: 80px 60px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        max-width: 600px;
+        color: white;
+        box-shadow: 0px 20px 40px rgba(49, 211, 92, 0.3);
+    }
+
+    .how-we-work__content h2 {
+        color: white;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .how-we-work__content p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+    }
+}
