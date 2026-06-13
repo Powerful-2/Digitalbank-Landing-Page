@@ -1,61 +1,46 @@
+// --- Selector Setup ---
 const btn = document.querySelector('.dropdown-toggle');
 const menu = document.querySelector('.mobile-menu');
 const overlay = document.querySelector('.overlay');
-const firstLink = menu.querySelector('a');
+const firstLink = menu ? menu.querySelector('a') : null;
 
-// Mobile Menu Toggle Logic
+// --- Mobile Menu Toggle Logic ---
 if (btn && menu) {
-  btn.addEventListener('click', () => {
-    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    
-    // 1. Toggle the ARIA state
-    btn.setAttribute('aria-expanded', !isExpanded);
-    
-    // 2. Toggle the classes
-    menu.classList.toggle('active');
-    overlay.classList.toggle('active');
-
-    // 3. Focus Management
-    if (!isExpanded) {
-      // Small delay to ensure menu is visible before focusing
-      setTimeout(() => firstLink && firstLink.focus(), 100); 
-    } else {
-      btn.focus(); 
-    }
-  });
+    btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        
+        btn.setAttribute('aria-expanded', !isExpanded);
+        btn.classList.toggle('open');
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        if (!isExpanded) {
+            setTimeout(() => firstLink && firstLink.focus(), 100);
+        } else {
+            btn.focus();
+        }
+    });
 }
 
-const toggleBtn = document.querySelector('.dropdown-toggle');
-const navMenu = document.querySelector('#mobile-menu');
-
-toggleBtn.addEventListener('click', () => {
-  toggleBtn.classList.toggle('open');
-  // Logic to show/hide your nav menu
-  navMenu.classList.toggle('show'); 
-});
-
-// Request Invite Button Logic
+// --- Request Invite Header Button Logic ---
 const inviteBtn = document.getElementById('inviteBtn');
 if (inviteBtn) {
-  inviteBtn.addEventListener('click', () => {
-    console.log('Invite button clicked!');
-    // You can add an alert or modal logic here later
-  });
+    inviteBtn.addEventListener('click', () => {
+        console.log('Invite button clicked!');
+    });
 }
 
-// --- Contact Form Validation ---
+// --- Contact Form Validation & EmailJS Submission ---
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevents the page from refreshing
+        e.preventDefault(); // Stops the page from reloading and appending queries to the URL
 
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
         let isValid = true;
 
-        // Basic Validation
         if (name === "" || email === "" || message === "") {
             alert("Please fill in all fields before requesting an invite.");
             isValid = false;
@@ -64,10 +49,16 @@ if (contactForm) {
             isValid = false;
         }
 
-        // Success Message
+        // If inputs are secure, send via EmailJS
         if (isValid) {
-            alert(`Thank you, ${name}! Your request has been sent.`);
-            contactForm.reset(); // Clears the form
+            emailjs.sendForm('service_7utn1ra', 'template_u7mgmcm', this)
+                .then(function() {
+                    alert(`Thank you, ${name}! Your request has been sent via EmailJS.`);
+                    contactForm.reset();
+                }, function(error) {
+                    alert('Failed to send the request. Please check your console.');
+                    console.log('EmailJS Error:', error);
+                });
         }
     });
 }
@@ -75,18 +66,15 @@ if (contactForm) {
 // --- Blog Search Functionality ---
 const blogSearch = document.getElementById('blogSearch');
 const blogCards = document.querySelectorAll('.blog-card');
-
 if (blogSearch) {
     blogSearch.addEventListener('keyup', (e) => {
         const searchString = e.target.value.toLowerCase();
-
         blogCards.forEach((card) => {
             const title = card.querySelector('.blog-card__title').innerText.toLowerCase();
-            
             if (title.includes(searchString)) {
-                card.style.display = 'block'; // Show if it matches
+                card.style.display = 'block';
             } else {
-                card.style.display = 'none';  // Hide if it doesn't match
+                card.style.display = 'none';
             }
         });
     });

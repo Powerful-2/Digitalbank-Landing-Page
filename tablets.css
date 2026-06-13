@@ -902,7 +902,13 @@ body,
 /* Tablet: from 768px up */
 @media (min-width: 768px) {
     main {
-            display: block;
+            display: block !important;
+
+                flex-direction: row !important;
+                /* Positions them side-by-side */
+                align-items: stretch !important;
+                /* FORCES the shorter white container to stretch down */
+                width: 100%;
         }
     
     .mission {
@@ -924,7 +930,7 @@ body,
         .vision {
             padding: 80px 60px;
             text-align: center;
-            background-color: var(--neutral-very-light-gray);
+            background-color: var(--neutral-light-grayish-blue:);
             /* Subtle contrast */
         }
     
@@ -1026,15 +1032,15 @@ body,
     }
 
     .how-we-work__content h2 {
-        color: white;
+        color: var(--primary-dark-blue);
         font-size: 36px;
         margin-bottom: 20px;
     }
     
     .how-we-work__content p {
-        color: rgba(255, 255, 255, 0.9);
+        color: var(--neutral-grayish-blue);
         font-size: 16px;
         line-height: 24px;
-        text-align: left;
+        text-align: center;
     }
 }

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>careers | Digitalbank</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Tablet Styles (Only loads at 768px and up) -->
-    <link rel="stylesheet" href="tablets.css" media="(min-width: 768px)">
-    <!-- Desktop Styles (Only loads at 1440px and up) -->
-    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
+    <title>Careers | Digitalbank</title>
 
+    <!-- 1. Layout Breakpoint Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablets.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1440px)">
+
+    <!-- 2. Cleaned Up Google Fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="header-content">
             <div class="logo">
                 <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
             </div>
-    
             <nav class="mobile-menu" id="mobile-menu">
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
@@ -30,9 +31,8 @@
                     <li><a href="careers.html">Careers</a></li>
                 </ul>
             </nav>
-    
             <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
-    
+
             <!-- The Hamburger Button -->
             <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
                 aria-controls="mobile-menu">
@@ -48,10 +48,10 @@
         <section class="careers section container">
             <div class="careers__header">
                 <h1>Join the Team</h1>
-                <p>Help us build the future of digital banking. We’re looking for talented young people to join our global team.
-                </p>
+                <p>Help us build the future of digital banking. We’re looking for talented young people to join our
+                    global team.</p>
             </div>
-    
+
             <div class="careers__list">
                 <!-- Job 1 -->
                 <div class="job-card">
@@ -59,32 +59,36 @@
                         <h3>Senior Frontend Developer</h3>
                         <p>Engineering • Remote</p>
                     </div>
-                    <button class="request-invite-btn">Apply Now</button>
+                    <!-- FIXED: Link attached cleanly -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2njvb8vrBK1eWAoyySrm1gXX72mFcsbiYH0nsDyK2JHOHug/viewform?usp=preview" target="_blank" class="request-invite-btn">Apply Now</a>
                 </div>
-    
+
                 <!-- Job 2 -->
                 <div class="job-card">
                     <div class="job-info">
                         <h3>UI/UX Designer</h3>
                         <p>Design • Lagos, Nigeria</p>
                     </div>
-                    <button class="request-invite-btn">Apply Now</button>
+                    <!-- FIXED: Link attached cleanly -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2njvb8vrBK1eWAoyySrm1gXX72mFcsbiYH0nsDyK2JHOHug/viewform?usp=preview"
+                        target="_blank" class="request-invite-btn">Apply Now</a>
                 </div>
-    
+
                 <!-- Job 3 -->
                 <div class="job-card">
                     <div class="job-info">
                         <h3>Customer Success Manager</h3>
                         <p>Operations • London, UK</p>
                     </div>
-                    <button class="request-invite-btn">Apply Now</button>
+                    <!-- FIXED: Link attached cleanly -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2njvb8vrBK1eWAoyySrm1gXX72mFcsbiYH0nsDyK2JHOHug/viewform?usp=preview"
+                        target="_blank" class="request-invite-btn">Apply Now</a>
                 </div>
             </div>
         </section>
     </main>
 
-    
+    <script src="script.js"></script>
 </body>
 
-<script src="scripts.js"></script>
 </html>

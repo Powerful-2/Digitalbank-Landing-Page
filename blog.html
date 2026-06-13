@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Digitalbank</title>
+    <!-- 1. Base Styles (All screens/Mobile) -->
     <link rel="stylesheet" href="style.css">
-    <!-- Tablet Styles (Only loads at 768px and up) -->
-    <link rel="stylesheet" href="tablets.css" media="(min-width: 768px)">
-    <!-- Desktop Styles (Only loads at 1440px and up) -->
-    <link rel="stylesheet" href="desktop.css" media="(min-width: 1440px)">
-
+    <!-- Tablet Styles (loads at 768px and up) -->
+    <link rel="stylesheet" href="tablets.css" media="screen and (min-width: 768px)">
+    <!-- 3. Desktop Styles (Active on screens 1440px and wider) -->
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1440px)">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <!-- Paste these exactly into your HTML <head> to fix line 13 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
@@ -113,6 +115,6 @@
         </section>
     </main>
     
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
