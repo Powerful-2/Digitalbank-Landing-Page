@@ -31,6 +31,7 @@
 body {
   font-family: "Public Sans", sans-serif;
   background-color: var(--neutral-very-light-gray);
+  /* background-color: #8F9396; */
   color: var(--primary-dark-blue);
   line-height: 1.5;
   overflow-x: hidden;
@@ -1627,7 +1628,10 @@ input:focus, textarea:focus{
   font-size: 28px;
   margin-bottom: 16px;
   font-weight: 500;
-  font-family: Public Sans, sans-serif;
+  font-family: 'Fredericka the Great', serif;
+  text-shadow: 0.5px 0px 0px var(--primary-dark-blue),
+      -0.5px 0px 0px var(--primary-dark-blue),
+      0px 0.5px 0px var(--primary-dark-blue);
 }
 
 .careers__header p{

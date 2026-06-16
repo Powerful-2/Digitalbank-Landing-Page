@@ -8,7 +8,7 @@ body,
     overflow-x: hidden;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px){
     .header {
         display: flex;
         flex-direction: column;
@@ -901,15 +901,15 @@ body,
 
 /* Tablet: from 768px up */
 @media (min-width: 768px) {
-    main {
-            display: block !important;
-
-                flex-direction: row !important;
+    main{
+        display: block !important;
+        flex-direction: row !important;
                 /* Positions them side-by-side */
-                align-items: stretch !important;
+        align-items: stretch !important;
                 /* FORCES the shorter white container to stretch down */
-                width: 100%;
-        }
+        width: 100%;
+    }
+
     
     .mission {
         padding: 100px 60px;
@@ -927,28 +927,28 @@ body,
         margin-bottom: 24px;
     }
 
-        .vision {
-            padding: 80px 60px;
-            text-align: center;
-            background-color: var(--neutral-light-grayish-blue:);
+    .vision {
+        padding: 80px 60px;
+        text-align: center;
+        background-color: var(--neutral-light-grayish-blue);
             /* Subtle contrast */
-        }
+    }
     
-        .vision__content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .vision__content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
     
-        .vision__content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    .vision__content h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
     
-        .vision__content p {
-            font-size: 18px;
-            line-height: 30px;
-            text-align: left !important;
-        }
+    .vision__content p {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left !important;
+    }
 
     .mission,
     .vision {
@@ -976,10 +976,10 @@ body,
         font-size: 18px;
     }
 
-        .mission__text h1,
-        .vision__content h2 {
-            margin-bottom: 20px;
-        }
+    .mission__text h1,
+    .vision__content h2 {
+        margin-bottom: 20px;
+    }
 
     .team__grid{
         flex-direction: row !important;
@@ -987,27 +987,27 @@ body,
         display: flex !important;
         justify-content: center !important;
             /* Allows cards to wrap to the next line */
-            gap: 30px !important;
-            width: 100% !important;
+        gap: 30px !important;
+        width: 100% !important;
     }
 
     .team__card {
         flex: 0 1 300px !important;
         text-align: center !important;
             /* Each card takes up roughly half the row */
-       /*  margin-bottom: 20px; */
+            /*  margin-bottom: 20px; */
     }
 
-        .mission,
-        .vision {
-            display: inline-block;
+    .mission,
+    .vision {
+        display: inline-block;
             /* Allows them to sit next to each other */
-            vertical-align: top;
-            width: 48%;
+        vertical-align: top;
+        width: 48%;
             /* Each takes up nearly half the row */
-            padding: 60px 20px;
-            text-align: left;
-        }
+        padding: 60px 20px;
+        text-align: left;
+    }
 
     .how-we-work{
         padding: 100px 40px;
@@ -1017,7 +1017,7 @@ body,
     }
 
     .how-we-work__content{
-        /* The "Beautiful Colored Circle" Effect */
+            /* The "Beautiful Colored Circle" Effect */
         background: linear-gradient(135px, var(--primary-lime-green), var(--primary-bright-cyan));
         padding: 80px 60px;
         border-radius: 50%;
@@ -1044,3 +1044,169 @@ body,
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   TABLET MEDIA QUERY ZONE (768px and wider)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+
+    /* --- About Page Code (Keep your working About rules here) --- */
+    .mission-vision-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    section.mission.section.container,
+    section.vision.section.container {
+        flex: 1;
+        padding: 60px 40px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    /* --- Contact Page Tablet Code (MUST STAY INSIDE THESE BRACKETS) --- */
+    section.contact.section.container {
+        display: flex !important;
+        flex-direction: row !important;
+        /* Side-by-side only on tablet/desktop */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+        padding: 80px 40px !important;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    .contact__header {
+        flex: 1;
+        text-align: left !important;
+        /* Left aligned on tablet */
+        margin-bottom: 0 !important;
+    }
+
+    .contact__header h1 {
+        font-size: 40px !important;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .contact__form {
+        flex: 1.2;
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+        width: 100%;
+    }
+
+    /* --- Blog Page Tablet Layout Grid (768px and above) --- */
+    .blog-page__grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 32px !important;
+        padding: 40px 0 !important;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    
+    .blog-card {
+        margin-bottom: 0 !important;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .blog-search {
+        max-width: 400px;
+        margin: 40px auto 0 auto !important;
+    }
+    
+    #blogSearch {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--neutral-grayish-blue);
+        border-radius: 4px;
+    }
+
+    /* ==========================================
+         4. CAREERS PAGE TABLET DESIGN (768px)
+     ========================================== */
+                /* --- Careers Page Header Tablet Layout --- */
+    .careers__header {
+        max-width: 650px !important;
+        margin: 0 auto 40px auto !important;
+        text-align: left !important;
+        padding: 0 20px !important;
+        width: 100% !important;
+    }
+        
+    .careers__header h1,
+    .careers__header p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        /* text-align: left !important;
+        margin-left: 0 !important; */
+    }
+        
+    .careers__header h1 {
+        font-family: 'Fredericka the Great', serif !important;
+        font-size: 40px !important;
+        line-height: 48px;
+        color: var(--primary-dark-blue);
+        margin-bottom: 16px;
+
+        text-shadow: 0.5px 0px 0px var(--primary-dark-blue),
+                -0.5px 0px 0px var(--primary-dark-blue),
+                0px 0.5px 0px var(--primary-dark-blue) !important;
+    }
+        
+    .careers__header p {
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--neutral-grayish-blue);
+        max-width: 280px;
+    }
+
+    .job-card{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        background-color: #FFFFFF;
+        padding: 24px 32px !important;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+        text-align: left !important;
+    }
+
+    .job-info{
+        margin-bottom: 0 !important;
+    }
+
+    .job-info h3{
+        font-size: 20px !important;
+        color: var(--primary-dark-blue);
+        margin-bottom: 4px;
+    }
+
+    .job-info p {
+        font-size: 14px;
+        color: var(--neutral-grayish-blue);
+    }
+
+    .careers__list .request-invite-btn{
+        margin-top: 0 !important;
+        white-space: nowrap;
+    }
+}
+
+ 

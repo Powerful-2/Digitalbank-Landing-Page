@@ -53,36 +53,41 @@
     </header>
 
     <main>
-        <!-- 1. MISSION SECTION (Reusing Hero-style layout) -->
-        <section class="mission section container">
-            <div class="mission__text">
-                <h1>Our Mission</h1>
-                <p>We’re on a journey to help you manage your finances better than ever before.</p>
-            </div>
-        </section>
-
-        <section class="vision section container">
-            <div class="vision__content">
-                <h2>Our Vision</h2>
-                <p>We envision a world where everyone has the tools to be financially free. By combining cutting-edge technology
-                    with human-centric design, we’re making that a reality.</p>
-            </div>
-        </section>
-
-        <!-- 3. HOW WE WORK (Short Explanation) -->
+        <!-- 1. FIXED: Added the exact class name label to activate your flex rules -->
+        <div class="mission-vision-wrapper">
+    
+            <!-- MISSION SECTION -->
+            <section class="mission section container">
+                <div class="mission__text">
+                    <h1>Our Mission</h1>
+                    <p>We’re on a journey to help you manage your finances better than ever before.</p>
+                </div>
+            </section>
+    
+            <!-- VISION SECTION -->
+            <section class="vision section container">
+                <div class="vision__content">
+                    <h2>Our Vision</h2>
+                    <p>We envision a world where everyone has the tools to be financially free. By combining cutting-edge
+                        technology with human-centric design, we’re making that a reality.</p>
+                </div>
+            </section>
+    
+            <!-- 2. FIXED: Closed the wrapper box immediately here so it only groups those two -->
+        </div>
+    
+        <!-- 3. HOW WE WORK (Now safely outside the side-by-side flex wrapper) -->
         <section class="how-we-work section container">
             <div class="how-we-work__content">
                 <h2>Why We're Different</h2>
-                <p>While traditional banks are stuck in the past with paperwork and hidden fees, we built Digitalbank from the
-                    ground up to be digital-first.</p>
-                <p>We don't have physical branches, which means we save money on rent and electricity—and we pass those savings
-                    directly to you through higher interest rates and lower fees.</p>
+                <p>While traditional banks are stuck in the past with paperwork and hidden fees, we built Digitalbank from
+                    the ground up to be digital-first.</p>
+                <p>We don't have physical branches, which means we save money on rent and electricity—and we pass those
+                    savings directly to you through higher interest rates and lower fees.</p>
             </div>
         </section>
-
-
     
-        <!-- 2. THE TEAM (New Grid) -->
+        <!-- 2. THE TEAM (New Grid remains untouched below) -->
         <section class="team section container">
             <h2>Meet the Team</h2>
             <div class="team__grid">
@@ -92,13 +97,12 @@
                     <h3>Ade Smith</h3>
                     <p>Founder & CEO</p>
                 </div>
-                <!-- Add 2 more people here -->
+                <!-- Person 2 -->
                 <div class="team__card">
                     <img src="images/image-restaurant.jpg" alt="Director" class="team__img">
                     <h3>Wonderful Richard</h3>
                     <p>Director</p>
-
-                 </div>
+                </div>
             </div>
         </section>
     </main>
