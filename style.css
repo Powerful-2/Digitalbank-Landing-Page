@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('tablets.css');
-@import url('desktop.css');
 
+/* 2. DESIGN VARIABLES (Your exact Frontend Mentor Colors) */
 :root {
   --primary-dark-blue: #2D314D;
   --primary-lime-green: #31D35C;
@@ -19,7 +18,7 @@
   --container-padding: 24px;
 }
 
-/* 2. RESET */
+/* 3. RESET EVERY ELEMENT */
 *,
 *::before,
 *::after {
@@ -28,14 +27,50 @@
   box-sizing: border-box;
 }
 
+/* 4. GLOBAL BASE STYLES (Enforces clean font styles across all pages) */
 body {
   font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  /* Standard font weight baseline */
   background-color: var(--neutral-very-light-gray);
-  /* background-color: #8F9396; */
   color: var(--primary-dark-blue);
   line-height: 1.5;
   overflow-x: hidden;
   margin-top: 64px;
+  /* Mobile header spacing rule stays safe here */
+}
+
+/* Typography Scale (Applying exact px sizes and font weights) */
+.h1 {
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--primary-dark-blue);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.h2 {
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--primary-dark-blue);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.h3 {
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--primary-dark-blue);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.p {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--neutral-grayish-blue);
+  font-weight: 400;
+  margin-bottom: 16px;
 }
 
 .header {
@@ -1703,6 +1738,61 @@ input:focus, textarea:focus{
   display: none;
   /* or inline-flex */
 }
+
+/* ==========================================================================
+   SUBPAGE GLOBAL OVERRIDES (Fixes Inconsistent Typography)
+   ========================================================================== */
+
+/* Automatically formats main container headings on about.html and careers.html */
+.about-page__wrapper h1,
+.careers-container h1,
+.about-page__wrapper h2,
+.careers-container h2 {
+  font-family: "Public Sans", sans-serif !important;
+  color: var(--primary-dark-blue) !important;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Automatically formats body copy and descriptions on subpages */
+.about-page__wrapper p,
+.careers-container p,
+.about-text,
+.job-details p {
+  font-family: "Public Sans", sans-serif !important;
+  color: var(--neutral-grayish-blue) !important;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.page-content-wrapper {
+  padding: 48px 24px;
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Font Family for the whole site */
+.body,.h1,.h2, .h3,.h4,.h5,.h6,.p {
+  font-family: "Public Sans", sans-serif !important;
+  color: #2d314d;
+  /* Consistent dark blue color found in your CSS */
+}
+
+/* Base Paragraph Styles */
+.p {
+  font-size: 16px;
+  /* Standardizing paragraph size */
+  line-height: 1.6;
+  font-weight: 400;
+  color: #9597a5;
+  /* Grayish blue for body text */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('tablets.css');
+@import url('desktop.css');
 
   
 
