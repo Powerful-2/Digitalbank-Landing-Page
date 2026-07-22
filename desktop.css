@@ -1071,16 +1071,37 @@ body {
             gap: 30px;
     }
 
-        @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
+    /* Ensure paragraph text doesn't get too small on larger screens */
+    .p {
+        font-size: 18px;
+    }
     
-            /* Ensure paragraph text doesn't get too small on larger screens */
-            .p {
-                font-size: 18px;
-            }
+    .h1 {
+            font-size: 52px;
+        }
+    }
+
+        /* --- Desktop centering configuration --- */
+        .careers.section.container {
+            max-width: 650px;
+            /* Keeps the cards compact and centered on large screens */
+            margin: 0 auto;
+            padding: 64px 0px;
+        }
     
-            .h1 {
-                font-size: 52px;
-            }
+        .job-card {
+            display: flex;
+            flex-direction: column;
+            /* Keeps it locked in a vertical stack down the same line */
+            align-items: center;
+            padding: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+    
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
         }
 
 

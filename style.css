@@ -27,6 +27,28 @@
   box-sizing: border-box;
 }
 
+/* Force absolute structural weights on your clean headings */
+h1,
+h2,
+h3 {
+  font-family: "Public Sans", sans-serif !important;
+  color: var(--primary-dark-blue);
+}
+
+.h1 {
+  font-weight: 700;
+}
+
+/* Heavy, high-impact titles */
+.h2 {
+  font-weight: 400;
+}
+
+/* Sleek, light subheadings */
+.h3 {
+  font-weight: 600;
+} /* Solid, highly readable grid-card headers */
+
 /* 4. GLOBAL BASE STYLES (Enforces clean font styles across all pages) */
 body {
   font-family: "Public Sans", sans-serif;
@@ -1255,7 +1277,29 @@ footer {
   border-radius: 22px;
 } */
 
-.request-invite-btn {
+/* --- Independent Career Application Button Layout --- */
+.job-apply-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 12px 32px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  /* Spans across full row width on phone displays */
+  box-sizing: border-box;
+  transition: opacity 0.2s ease;
+}
+
+.job-apply-btn:hover {
+  opacity: 0.85;
+  /* Instant premium user feedback interaction */
+}
+
+/* .request-invite-btn {
   font-family: 'Public Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1269,7 +1313,7 @@ footer {
   order: 0;
   flex-grow: 0;
 }
-
+ */
 /* Keep the link off-screen but visible when focused */
 .skip-link {
   position: absolute;
@@ -1766,10 +1810,11 @@ input:focus, textarea:focus{
 }
 
 .page-content-wrapper {
-  padding: 48px 24px;
+  padding-top: 84px !important;
+  padding-bottom: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
   min-height: calc(100vh - 64px);
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 

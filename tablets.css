@@ -1163,11 +1163,24 @@ body,
         margin-bottom: 0 !important;
     }
 
-    .contact__header h1 {
+        .contact__header h1 {
+            color: var(--primary-dark-blue);
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-family: 'Public Sans';
+            font-style: normal;
+            font-weight: 300;
+            /* font-size: 40px; */
+            line-height: 120%;
+        }
+    
+
+
+    /* .contact__header h1 {
         font-size: 40px !important;
         line-height: 48px;
         margin-bottom: 16px;
-    }
+    } */
 
     .contact__form {
         flex: 1.2;
@@ -1213,7 +1226,13 @@ body,
     /* ==========================================
          4. CAREERS PAGE TABLET DESIGN (768px)
      ========================================== */
-                /* --- Careers Page Header Tablet Layout --- */
+    /* --- Careers Page Header Tablet Layout --- */
+    .careers.section.container{
+        max-width: 580px !important;
+        margin: 0 auto !important;
+        padding: 40px 16px;
+    }
+    
     .careers__header {
         max-width: 650px !important;
         margin: 0 auto 40px auto !important;
@@ -1227,31 +1246,38 @@ body,
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        /* text-align: left !important;
-        margin-left: 0 !important; */
     }
         
-    .careers__header h1 {
+ /*    .careers__header h1 {
         font-family: "public-sans", sans-serif !important;
             font-style: normal;
             font-weight: 300;
-            /* font-size: 56px !important; */
             line-height: 1.2;
             text-align: center;
             letter-spacing: -1px;
             color: #2D314D;
             margin: 0 auto;
-            width: 608px;
+
             height: 48px;
         
         font-size: 40px !important;
-        /* line-height: 48px; */
         color: var(--primary-dark-blue);
         margin-bottom: 16px;
-
         text-shadow: 0.5px 0px 0px var(--primary-dark-blue),
                 -0.5px 0px 0px var(--primary-dark-blue),
                 0px 0.5px 0px var(--primary-dark-blue) !important;
+    } */
+
+        .careers__header h1 {
+            color: var(--primary-dark-blue) !important;
+            font-size: 32px !important;
+            margin-bottom: 16px;
+            font-family: 'Public Sans' !important;
+            font-style: normal;
+            font-weight: 300 !important;
+                            /* font-size: 40px; */
+            line-height: 120%;
+        }
     }
         
     .careers__header p {
@@ -1261,7 +1287,46 @@ body,
         max-width: 280px;
     }
 
-    .job-card{
+        /* --- Tablets Job Card Uniform Vertical Stack --- */
+        .job-card {
+            display: flex;
+            flex-direction: column;
+            /* Stacks everything vertically down the same line */
+            align-items: center;
+            /* Aligns all text and buttons perfectly to the left */
+            gap: 16px;
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+    
+        .job-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            /* Clean gap between title and engineering text */
+        }
+    
+        .job-info h3,
+        .job-info p {
+            margin: 0px;
+            /* Removes messy default layout margins completely */
+            text-align: center;
+        }
+    
+        /* Adjust the button behavior inside tablet stack */
+        .job-apply-btn {
+            width: auto !important;
+            /* Keeps the button from stretching to full card width */
+            padding: 12px 36px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+    /* .job-card{
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
@@ -1292,7 +1357,7 @@ body,
         margin-top: 0 !important;
         white-space: nowrap;
     }
-
+ */
     /* TABLET & MOBILE ONLY: Adjusts Article Grid */
     @media (max-width: 768px) {
         .articles-grid {
@@ -1331,7 +1396,7 @@ body,
     .careers h2, .about h1, .contact h1,
     .blog h1, .careers h1 {
         font-family: "Public Sans", sans-serif;
-        text-align: center;
+        text-align: left;
     }
 }
 
