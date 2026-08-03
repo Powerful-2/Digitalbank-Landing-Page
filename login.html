@@ -3,28 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Digitalbank</title>
-    <!-- 1. Base Styles (All screens/Mobile) -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Tablet Styles (loads at 768px and up) -->
-    <link rel="stylesheet" href="tablets.css" media="screen and (min-width: 768px)">
-    <!-- 3. Desktop Styles (Active on screens 1440px and wider) -->
-    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1440px)">
-    <!-- <link href="https://fonts.googleapis.com" rel="stylesheet"> -->
-    <!-- Paste these exactly into your HTML <head> to fix line 13 -->
+
+    <title>Secure Login Portal | DigitalBank</title>
+
+    <meta name="description" content="Log in securely to your DigitalBank account. Manage your finances, view account balances, track spending, and access your digital banking dashboard.">
+
+    <link rel="canonical" href="https://powerful-2.github.io/Digitalbank-Landing-Page/login.html">
+
+    <!-- REMOVE AND DELETE THIS ENTIRE LINE FROM ALL PAGES -->
+<!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+  "> -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powerful-2.github.io/Digitalbank-Landing-Page/login.html">
+    <meta property="og:title" content="Secure Login Portal | DigitalBank">
+    <meta property="og:description" content="Log in securely to your DigitalBank account and manage your finances with ease.">
+    <meta property="og:image" content="https://powerful-2.github.io/Digitalbank-Landing-Page/images/preview.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Secure Login Portal | DigitalBank">
+    <meta name="twitter:description" content="Log in securely to your DigitalBank account and manage your finances with ease.">
+    <meta name="twitter:image" content="https://powerful-2.github.io/Digitalbank-Landing-Page/images/preview.jpg">
+
+    <link rel="icon" href="./images/favicon.ico">
+
+    <link rel="icon" type="image/svg+xml" href="./images/logo-dark.svg">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablets.css" media="(min-width:768px)">
+    <link rel="stylesheet" href="desktop.css" media="(min-width:1440px)">
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <img src="./images/logo-dark.svg" alt="">
+                <img src="./images/logo-dark.svg" alt="Digitalbank Logo">
             </div>
     
+            <!-- Correctly configured mobile drawer tracking class -->
             <nav class="mobile-menu" id="mobile-menu">
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
@@ -36,61 +63,57 @@
                 </ul>
             </nav>
     
-            <!-- <form action="/invite" method="post">
-              <button type="submit" class="request-invite-btn">Request Invite</button>
-            </form> -->
-            <!-- Add id="inviteBtn" so your JavaScript can find it -->
             <button type="button" class="request-invite-btn" id="inviteBtn">Request Invite</button>
     
-    
-            <!-- The Hamburger Button -->
-            <button type="button" class="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
+            <!-- The Hamburger Button with Explicit Class and ID Hooks -->
+            <button type="button" class="dropdown-toggle" id="dropdown-toggle" aria-label="Toggle Menu" aria-expanded="false"
                 aria-controls="mobile-menu">
                 <span class="hamburger-bar bar-1"></span>
                 <span class="hamburger-bar bar-2"></span>
                 <span class="hamburger-bar bar-3"></span>
             </button>
         </div>
+    
+        <!-- The missing visual shadow overlay layer container -->
         <div class="overlay" id="overlay"></div>
     </header>
-    <main class="login-container">
-        <div class="login-header">
-            <h1>Digital Bank</h1>
-            <p>Login to your account</p>
-        </div>
-        
-        <!-- Login Form-->
-        <form action="LoginForm">
 
-            <!-- Email Input Group-->
-            <div class="form-group">
-                <label for="LoginEmail">Email Address</label>
-                <input type="email" id="LoginEmail"
-                placeholder="Enter your email" required autocomplete="email">
-            </div>
 
-            <!--Password Input Group-->
-            <div class="form-group">
-                <label for="LoginPassword">Password</label>
-                <input type="password" id="LoginPassword"
-                placeholder="Enter your password" 
-                required 
-                autocomplete="current-password">
-            </div>
+    <main id="main-content">
+        <section class="login-container" aria-labelledby="login-title">
+            <header class="login-header">
+                <h1 id="login-title">Welcome Back</h1>
+                <p>Sign in to your DigitalBank account.</p>
+            </header>
 
-            <button class="submit" class="submit-btn">Login</button>
-        </form>
+            <form id="loginForm" action="#">
+                <div class="form-group">
+                    <label for="LoginEmail">Email Address</label>
+                    <input type="email" id="LoginEmail" placeholder="Enter your email" required autocomplete="email">
+                </div>
+            
+                <div class="form-group">
+                    <label for="LoginPassword">Password</label>
+                    <input type="password" id="LoginPassword" placeholder="Enter your password" required
+                        autocomplete="current-password">
+                </div>
+            
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
 
-        <div id="LoginMessage"></div>
+            <div id="loginMessage"></div>
+            <!-- <div id="login-message" aria-live="polite"></div> -->
 
-        <!--FOOTER SECTION-->
-        <div class="login-footer">
-            <p>Don't have an account?</p>
-            <a href="signup.html">Sign up here</a>
-            <p style="margin-top: 10px; font-size: 12px; color: #999;">Demo: john@gmail.com / password123</p>
-        </div>
+            <footer class="login-footer">
+                <p>Don't have an account?</p>
+                <a href="signup.html">Create one here</a>
+
+                <p class="demo-credentials">Demo Account: john@gmail.com / password123</p>
+            </footer>
+        </section>
     </main>
-</body>
 
-<script src="login.html"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>

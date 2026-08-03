@@ -1082,26 +1082,40 @@ body {
         }
     }
 
-        /* --- Desktop centering configuration --- */
-        .careers.section.container {
-            max-width: 650px;
-            /* Keeps the cards compact and centered on large screens */
-            margin: 0 auto;
-            padding: 64px 0px;
-        }
+    /* --- Desktop centering configuration --- */
+    .careers.section.container {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 64px 0px;
+    }
     
-        .job-card {
-            display: flex;
-            flex-direction: column;
+    .job-card {
+        display: flex;
+        flex-direction: column;
             /* Keeps it locked in a vertical stack down the same line */
-            align-items: center;
-            padding: 32px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        align-items: center;
+        padding: 32px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .job-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+        /* ==========================================================================
+       DESKTOP COMPACT LOGIN ALIGNMENT LOCKDOWN
+       ========================================================================== */
+        .login-container {
+            max-width: 480px;
+            /* Constrains the entire view card perfectly on wide viewports */
+            margin: 0 auto;
+            padding: 80px 0px;
         }
     
-        .job-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+        .login-container form {
+            padding: 40px;
+            /* Extra interior breathing room for beautiful spacing */
         }
 
 

@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('tablets.css');
+@import url('desktop.css');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 /* 2. DESIGN VARIABLES (Your exact Frontend Mentor Colors) */
 :root {
@@ -223,12 +227,29 @@ body {
 }
 
 /* This is the class your JS toggles */
+/* --- Mobile Menu Animation Toggle Tweak States --- */
 .mobile-menu.active {
-  display: flex !important;
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .overlay.active {
   display: block !important;
+  opacity: 1 !important;
+}
+
+/* Turns the 3 bars into an 'X' icon when clicked */
+.dropdown-toggle.open .bar-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.dropdown-toggle.open .bar-2 {
+  opacity: 0;
+}
+
+.dropdown-toggle.open .bar-3 {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .logo-wrapper {
@@ -1392,11 +1413,11 @@ footer {
    /* optional: ensures predictable layout */
 }
 
-.dropdown-toggle{
+/* .dropdown-toggle{
   position: absolute;
   left: 584px;
     
-}
+} */
 
 .logo{
   display: flex;
@@ -1835,10 +1856,190 @@ input:focus, textarea:focus{
   /* Grayish blue for body text */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('tablets.css');
-@import url('desktop.css');
 
+/* AUTHENTICATION LAYOUT: CORE MOBILE FIRST DESIGN */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h1 {
+  margin-bottom: 8px;
+}
+
+/* Form Panel */
+.login-container form {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+}
+
+.form-group input {
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  padding: 12px 16px;
+  border: 1px solid #E1E1E1;
+  border-radius: 6px;
+  background-color: var(--neutral-very-light-gray);
+  color: var(--primary-dark-blue);
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-bright-cyan);
+}
+
+.submit-btn {
+  font-family: "Public Sans", sans-serif;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 24px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.85;
+}
+
+/* Authentication dynamic feedback validation */
+#LoginMessage {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 16px;
+  min-height: 20px;
+}
+
+/* Panel Footer Links*/
+.login-footer {
+    background-color: #2D314D;
+      /* width: 100%;
+      max-width: 400px; */
+        max-width: 375px;
+        min-height: 510px;
+        padding: 56px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+          margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            width: auto;
+            min-height: 100vh;
+            padding-bottom: 0;
+          
+}
+
+.login-footer p {
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.login-footer a {
+  color: var(--primary-bright-cyan);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.login-footer a:hover {
+  color: var(--primary-lime-green);
+}
+
+/* --- Force Mobile Responsive Actions --- */
+@media (max-width: 767px) {
+
+  /* When javascript adds .active, force display grid layout override */
+  .mobile-menu.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1100 !important;
+  }
+
+  .overlay.active {
+    display: block !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+  }
+}
+
+/* --- High-Priority Layer Positioning Core Reset --- */
+.header {
+  z-index: 9999 !important;
+  /* Forces the navigation bar to sit on top of everything */
+}
+
+.dropdown-toggle {
+  position: relative !important;
+  z-index: 10001 !important;
+  /* Guarantees the button is clickable and not covered by headers */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  /* Forces the browser to listen to click registers */
+}
+
+.mobile-menu {
+  z-index: 10000 !important;
+}
+
+.overlay {
+  z-index: 9998 !important;
+}
+
+/* Tighter vertical spacing for mobile login cards */
+.login-container form {
+  padding: 24px 20px !important;
+  gap: 16px !important;
+}
+
+.login-header {
+  margin-bottom: 20px !important;
+}
   
 
 

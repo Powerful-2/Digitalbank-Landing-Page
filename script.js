@@ -1,81 +1,200 @@
-// --- Selector Setup ---
-const btn = document.querySelector('.dropdown-toggle');
-const menu = document.querySelector('.mobile-menu');
-const overlay = document.querySelector('.overlay');
-const firstLink = menu ? menu.querySelector('a') : null;
+/* ==========================================================================
+   DIGITALBANK MAIN SCRIPT
+   ========================================================================== */
 
-// --- Mobile Menu Toggle Logic ---
-if (btn && menu) {
-    btn.addEventListener('click', () => {
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        
-        btn.setAttribute('aria-expanded', !isExpanded);
-        btn.classList.toggle('open');
-        menu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        
+/* ==========================================================================
+   1. GLOBAL CONSTANTS
+   ========================================================================== */
+
+const EMAILJS_SERVICE_ID = "service_7utn1ra";
+const EMAILJS_TEMPLATE_ID = "template_u7mgmcm";
+const FOCUS_DELAY_MS = 100;
+
+/* ==========================================================================
+   2. EMAILJS INITIALIZATION
+   ========================================================================== */
+
+if (typeof emailjs !== "undefined") {
+    emailjs.init("1HVZ07Q1CSvGstzW9"); // Replace with your EmailJS Public Key
+    
+}
+
+/* ==========================================================================
+   3. MOBILE MENU
+   ========================================================================== */
+
+const menuButton =
+    document.querySelector(".dropdown-toggle") ||
+    document.getElementById("dropdown-toggle");
+
+const menuDrawer =
+    document.querySelector(".mobile-menu") ||
+    document.getElementById("mobile-menu");
+
+const menuOverlay =
+    document.querySelector(".overlay") ||
+    document.getElementById("overlay");
+
+const menuFirstLink = menuDrawer?.querySelector("a");
+
+if (menuButton && menuDrawer && menuOverlay) {
+
+    menuButton.addEventListener("click", () => {
+
+        const isExpanded =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+
+        menuButton.classList.toggle("open");
+        menuDrawer.classList.toggle("active");
+        menuOverlay.classList.toggle("active");
+
         if (!isExpanded) {
-            setTimeout(() => firstLink && firstLink.focus(), 100);
+
+            setTimeout(() => {
+                menuFirstLink?.focus();
+            }, FOCUS_DELAY_MS);
+
         } else {
-            btn.focus();
+
+            menuButton.focus();
+
         }
+
     });
+
 }
 
-// --- Request Invite Header Button Logic ---
-const inviteBtn = document.getElementById('inviteBtn');
-if (inviteBtn) {
-    inviteBtn.addEventListener('click', () => {
-        console.log('Invite button clicked!');
-    });
-}
+/* ==========================================================================
+   4. HEADER INVITE BUTTON
+   ========================================================================== */
 
-// --- Contact Form Validation & EmailJS Submission ---
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Stops the page from reloading and appending queries to the URL
+const headerInviteButton = document.getElementById("inviteBtn");
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        let isValid = true;
+headerInviteButton?.addEventListener("click", () => {
+    console.log("Invite button clicked.");
+});
 
-        if (name === "" || email === "" || message === "") {
+/* CONTACT FORM VALIDATION & EMAILJS (WITH OPTIMIZED LOADING FEEDBACK) */
+const userContactSubmissionForm = document.getElementById('contactForm');
+if (userContactSubmissionForm) {
+    userContactSubmissionForm.addEventListener('submit', function(formSubmitEvent) {
+        formSubmitEvent.preventDefault();
+
+        // Target the button inside this form to manage its state
+        const submitButton = this.querySelector('button') || this.querySelector('.request-invite-btn');
+
+        const verifiedClientName = document.getElementById('name').value.trim();
+        const verifiedClientEmail = document.getElementById('email').value.trim();
+        const verifiedClientMessage = document.getElementById('message').value.trim();
+        let isValidationPassing = true;
+
+        if (verifiedClientName === "" || verifiedClientEmail === "" || verifiedClientMessage === "") {
             alert("Please fill in all fields before requesting an invite.");
-            isValid = false;
-        } else if (!email.includes("@")) {
+            isValidationPassing = false;
+        } else if (!verifiedClientEmail.includes("@")) {
             alert("Please enter a valid email address.");
-            isValid = false;
+            isValidationPassing = false;
         }
 
-        // If inputs are secure, send via EmailJS
-        if (isValid) {
-            emailjs.sendForm('service_7utn1ra', 'template_u7mgmcm', this)
+        if (isValidationPassing) {
+            // OPTIMIZED: Provide immediate visual feedback while the network request loads
+            if (submitButton) {
+                submitButton.innerText = "Sending...";
+                submitButton.style.opacity = "0.7";
+                submitButton.disabled = true; // Prevent multiple duplicate submissions
+            }
+
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
                 .then(function() {
-                    alert(`Thank you, ${name}! Your request has been sent via EmailJS.`);
-                    contactForm.reset();
-                }, function(error) {
+                    alert(`Thank you, ${verifiedClientName}! Your request has been sent successfully.`);
+                    userContactSubmissionForm.reset();
+                }, function(apiExecutionError) {
                     alert('Failed to send the request. Please check your console.');
-                    console.log('EmailJS Error:', error);
+                    console.log('EmailJS SDK Error:', apiExecutionError);
+                })
+                .finally(function() {
+                    // OPTIMIZED: Always restore the button to its original state after the network finishes
+                    if (submitButton) {
+                        submitButton.innerText = "Request Invite";
+                        submitButton.style.opacity = "1";
+                        submitButton.disabled = false;
+                    }
                 });
         }
     });
 }
 
-// --- Blog Search Functionality ---
-const blogSearch = document.getElementById('blogSearch');
-const blogCards = document.querySelectorAll('.blog-card');
-if (blogSearch) {
-    blogSearch.addEventListener('keyup', (e) => {
-        const searchString = e.target.value.toLowerCase();
+
+/* ==========================================================================
+   6. BLOG SEARCH
+   ========================================================================== */
+
+const blogSearchInput =
+    document.getElementById("blogSearch");
+
+const blogCards =
+    document.querySelectorAll(".blog-card");
+
+if (blogSearchInput) {
+
+    blogSearchInput.addEventListener("input", (event) => {
+
+        const query =
+            event.target.value.toLowerCase();
+
         blogCards.forEach((card) => {
-            const title = card.querySelector('.blog-card__title').innerText.toLowerCase();
-            if (title.includes(searchString)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+
+            const title =
+                card
+                    .querySelector(".blog-card__title")
+                    ?.textContent.toLowerCase() || "";
+
+            card.style.display =
+                title.includes(query)
+                    ? "block"
+                    : "none";
+
         });
+
+    });
+
+}
+
+/* --- Login Interface Authentication Form Logic --- */
+const activePortalLoginForm = document.getElementById('loginForm');
+
+// Look for 'loginMessage' (camelCase) with a fallback to your old 'LoginMessage' (PascalCase)
+let portalAuthenticationFeedbackDisplay = document.getElementById('loginMessage') || document.getElementById('LoginMessage');
+
+if (activePortalLoginForm) {
+    activePortalLoginForm.addEventListener('submit', (portalLoginEvent) => {
+        portalLoginEvent.preventDefault(); // Prevents inputs from disappearing and page resetting
+        
+        const credentialsEmailInput = document.getElementById('LoginEmail').value.trim();
+        const credentialsPasswordInput = document.getElementById('LoginPassword').value.trim();
+        
+        // Defensive Check: If the message div is missing in HTML, build it on the fly to prevent crashes
+        if (!portalAuthenticationFeedbackDisplay) {
+            portalAuthenticationFeedbackDisplay = document.createElement('div');
+            portalAuthenticationFeedbackDisplay.id = 'loginMessage';
+            activePortalLoginForm.parentNode.insertBefore(portalAuthenticationFeedbackDisplay, activePortalLoginForm.nextSibling);
+        }
+        
+        // Authenticate credentials against demo parameters
+        if (credentialsEmailInput === 'john@gmail.com' && credentialsPasswordInput === 'password123') {
+            portalAuthenticationFeedbackDisplay.style.color = '#31D35C'; // Success Green
+            portalAuthenticationFeedbackDisplay.innerText = "Login successful! Redirecting dashboard...";
+            
+            setTimeout(() => {
+                window.location.href = "index.html"; // Redirects straight home
+            }, 1500);
+        } else {
+            portalAuthenticationFeedbackDisplay.style.color = '#FF0000'; // Error Red
+            portalAuthenticationFeedbackDisplay.innerText = "Invalid credentials. Please use the demo account values below.";
+        }
     });
 }
+
+
