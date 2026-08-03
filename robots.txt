@@ -1,0 +1,10 @@
+# User-Agent: * means these rules apply to all search engine crawlers (Google, Bing, DuckDuckGo)
+User-Agent: *
+Allow: /
+
+# Disallow crawling the images or styles assets folders directly to save search crawl budget
+Disallow: /images/
+Disallow: /css/
+
+# Link search engine bots directly to your new XML sitemap map automatically
+Sitemap: https://github.io
