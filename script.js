@@ -1,27 +1,17 @@
-/* ==========================================================================
-   DIGITALBANK MAIN SCRIPT
-   ========================================================================== */
-
-/* ==========================================================================
-   1. GLOBAL CONSTANTS
-   ========================================================================== */
+/* 1. GLOBAL CONSTANTS */
 
 const EMAILJS_SERVICE_ID = "service_7utn1ra";
 const EMAILJS_TEMPLATE_ID = "template_u7mgmcm";
 const FOCUS_DELAY_MS = 100;
 
-/* ==========================================================================
-   2. EMAILJS INITIALIZATION
-   ========================================================================== */
+/* 2. EMAILJS INITIALIZATION */
 
 if (typeof emailjs !== "undefined") {
     emailjs.init("1HVZ07Q1CSvGstzW9"); // Replace with your EmailJS Public Key
     
 }
 
-/* ==========================================================================
-   3. MOBILE MENU
-   ========================================================================== */
+/* 3. MOBILE MENU */
 
 const menuButton =
     document.querySelector(".dropdown-toggle") ||
@@ -66,9 +56,7 @@ if (menuButton && menuDrawer && menuOverlay) {
 
 }
 
-/* ==========================================================================
-   4. HEADER INVITE BUTTON
-   ========================================================================== */
+/* 4. HEADER INVITE BUTTON */
 
 const headerInviteButton = document.getElementById("inviteBtn");
 
@@ -127,9 +115,7 @@ if (userContactSubmissionForm) {
 }
 
 
-/* ==========================================================================
-   6. BLOG SEARCH
-   ========================================================================== */
+/* 6. BLOG SEARCH */
 
 const blogSearchInput =
     document.getElementById("blogSearch");

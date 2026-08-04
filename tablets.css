@@ -38,8 +38,6 @@ body {
     margin-top: 64px;
 }
 
-
-/* Ensure the page itself allows the full tablet width */
 html,
 body,
 .body {
@@ -51,35 +49,17 @@ body,
 
 @media screen and (min-width: 768px){
     .header {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    /* .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFFFFF;
+        position: sticky;
+        top: 0;
         width: 100%;
-        max-width: 768px;
-        height: 64px;
-        position: relative;
-        left: 0;
-        margin: 0 auto;
-        box-sizing: border-box;
-        padding: 0 80px;
-    } */
-        /* Inside tablets.css (Targets 768px screens) */
+        z-index: 1000;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
         main,
         .main-content {
-            /* margin-top: 90px !important; */
             margin-top: 0 !important;
-                padding-top: 0;
-            /* Pushes content down on tablets */
+            padding-top: 0;
         }
 
     .header-content {
@@ -119,10 +99,8 @@ body,
         padding: 0px 0px 72px;
         gap: 48px;
         width: 100% !important;
-        /* This breaks the 375px limit */
         max-width: 768px !important;
         min-height: 1011px;
-        /* Using min-height so it can grow if content changes */
         margin: 0 auto;
         background: #FAFAFA;
         position: relative;
@@ -139,7 +117,6 @@ body,
     .image-wrapper {
         width: 100% !important;
         max-width: 768px !important;
-        /* Overrides the 375px from mobile */
         height: 581px !important;
         margin: 0 !important;
         left: 0 !important;
@@ -259,21 +236,18 @@ body,
         justify-content: center;
         align-items: center;
         padding: 80px !important;
-        /* Spacious 80px padding on all sides */
         width: 100% !important;
         max-width: 768px !important;
         min-height: 984px !important;
         background: #F4F5F7 !important;
         position: relative;
         margin: 0 auto !important;
-        /* Centers the 768px block */
     }
 
     .features-intro,
     .features-content {
         width: 100%;
         max-width: 608px;
-        /* 768px minus 80px padding on both sides */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -292,7 +266,6 @@ body,
         order: 0;
         flex-grow: 0;
         margin: 0 auto !important;
-        /* Centers it inside the 80px padding */
     }
 
     .features-intro {
@@ -308,14 +281,12 @@ body,
         order: 0;
         flex-grow: 0;
         margin: 0 auto !important;
-        /* Centers it within the features section */
         text-align: center;
     }
 
     .features-intro h2,
     .features-intro p {
         margin: 0 !important;
-        /* Let the 'gap' do the work */
         width: 100%;
     }
 
@@ -334,8 +305,6 @@ body,
     .features-card {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        /* Centers icons and text inside each card */
         text-align: center;
         width: 100%;
     }
@@ -356,7 +325,6 @@ body,
         align-self: stretch;
         flex-grow: 0;
         margin: 0 auto !important;
-        /* Keep it centered */
         max-width: 100%;
     }
 
@@ -367,7 +335,6 @@ body,
         font-family: 'Public Sans', sans-serif !important;
         font-style: normal;
         font-weight: 400 !important;
-        /* Regular weight */
         font-size: 18px !important;
         line-height: 155% !important;
         text-align: center !important;
@@ -375,17 +342,15 @@ body,
         color: #9597A5 !important;
         flex: none;
         order: 1;
-        /* Sits after the H2 Title */
         align-self: stretch;
         flex-grow: 0;
         margin: 0 auto !important;
         padding: 0 !important;
-        /* Clears any mobile side padding */
         display: block !important;
     }
 }
 
-/* TABLET OVERRIDE */
+/* TABLET VIEW */
 @media (min-width: 768px) {
     section.features-section .features-intro p {
         /* width: 518px !important;
@@ -408,10 +373,8 @@ body,
         align-items: start !important;
         padding: 0 !important;
         margin: 0 auto !important;
-        /* Centers the grid in the section */
         flex: none;
         order: 1;
-        /* Sits 2nd, after the intro text */
         align-self: stretch;
     }
 
@@ -427,12 +390,10 @@ body,
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap;
-        /* Allows the next 2 cards to wrap to a new row */
         align-items: center !important;
         padding: 0px !important;
         gap: 56px !important;
         width: 566px !important;
-        /* Total width of two cards + the gap */
         height: auto !important;
         margin: 0 auto !important;
     }
@@ -442,14 +403,12 @@ body,
         display: flex;
         flex-direction: column;
         align-items: flex-start !important;
-        /* Icons and text align to the left */
         text-align: left !important;
         padding: 0px !important;
         gap: 40px !important;
         height: 276px !important;
     }
 
-    /* Ensure the icon container doesn't have extra mobile margins */
     .feature-icon-container,
     .feature-icon-container--alt {
         margin: 0 !important;
@@ -466,7 +425,6 @@ body,
         height: 72px !important;
         background: linear-gradient(216.99deg, #33D35E 8.35%, #2AB6D9 97.75%) !important;
         border-radius: 36px !important;
-        /* Perfect circle (72 / 2) */
         margin: 0 !important;
     }
 
@@ -480,21 +438,18 @@ body,
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
-        /* Left-aligns heading and paragraph */
         padding: 0px !important;
         gap: 24px !important;
         width: 255px !important;
         height: 164px !important;
         flex: none;
         order: 1;
-        /* Sits second, after the 72px Icon */
         align-self: stretch;
         flex-grow: 0;
         text-align: left !important;
         margin: 0 !important;
     }
 
-    /* Ensure the heading and paragraph inside don't have old mobile margins */
     .feature-description h3,
     .feature-description p {
         margin: 0 !important;
@@ -512,7 +467,6 @@ body,
         letter-spacing: -0.4px !important;
         color: #2D314D !important;
         text-align: left !important;
-        /* Left-aligned for tablet grid */
         flex: none;
         order: 0;
         align-self: stretch;
@@ -549,7 +503,6 @@ body,
         min-height: 1068px !important;
         position: relative;
         margin: 0 auto !important;
-        /* Centers the section on the screen */
         background: #FAFAFA !important;
     }
 
@@ -580,7 +533,6 @@ body,
         letter-spacing: -0.75px !important;
         color: #2D314D !important;
         margin: 0 auto !important;
-        /* Keep it centered in the middle of the screen */
         max-width: 100%;
     }
 
@@ -647,7 +599,6 @@ body,
         margin: 0 !important;
         height: auto !important;
         padding: 0 !important;
-        /* Clears mobile padding that's causing the stretch */
     }
 
     .article-author {
@@ -849,7 +800,6 @@ body,
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        /* Centers the 'a' boxes */
         gap: 8px !important;
         width: 100% !important;
         max-width: 160px !important;
@@ -941,7 +891,7 @@ body,
         margin: 0 auto !important;
     }
 
-    /* About Page - Tablet Adjustments */
+    /* About Page - Tablet View */
     .team__grid {
         flex-direction: row;
         flex-wrap: wrap;
@@ -950,7 +900,6 @@ body,
     
     .team__card {
         flex: 1 1 40%;
-            /* Allows 2 cards per row */
     }
 }
 
@@ -959,9 +908,7 @@ body,
     main{
         display: block !important;
         flex-direction: row !important;
-                /* Positions them side-by-side */
         align-items: stretch !important;
-                /* FORCES the shorter white container to stretch down */
         width: 100%;
     }
 
@@ -997,7 +944,6 @@ body,
         padding: 80px 60px;
         text-align: center;
         background-color: var(--neutral-light-grayish-blue);
-            /* Subtle contrast */
     }
     
     .vision__content {
@@ -1021,12 +967,9 @@ body,
         .mission__text p,
         .vision__content p {
             max-width: 608px;
-            /* Matches your H2 width */
             width: 100%;
             line-height: 1.5;
-            /* Good for readability */
             color: #9698a6;
-            /* Standard site body color */
             margin-bottom: 1.5rem;
         }
 
@@ -1060,7 +1003,6 @@ body,
         flex-wrap: wrap !important;
         display: flex !important;
         justify-content: center !important;
-            /* Allows cards to wrap to the next line */
         gap: 30px !important;
         width: 100% !important;
     }
@@ -1068,17 +1010,13 @@ body,
     .team__card {
         flex: 0 1 300px !important;
         text-align: center !important;
-            /* Each card takes up roughly half the row */
-            /*  margin-bottom: 20px; */
     }
 
     .mission,
     .vision {
         display: inline-block;
-            /* Allows them to sit next to each other */
         vertical-align: top;
         width: 48%;
-            /* Each takes up nearly half the row */
         padding: 60px 20px;
         text-align: left;
     }
@@ -1091,7 +1029,6 @@ body,
     }
 
     .how-we-work__content{
-            /* The "Beautiful Colored Circle" Effect */
         background: linear-gradient(135px, var(--primary-lime-green), var(--primary-bright-cyan));
         padding: 80px 60px;
         border-radius: 50%;
@@ -1119,12 +1056,9 @@ body,
     }
 }
 
-/* ==========================================================================
-   TABLET MEDIA QUERY ZONE (768px and wider)
-   ========================================================================== */
+/* TABLET MEDIA QUERY (768px and wider) */
 @media screen and (min-width: 768px) {
-
-    /* --- About Page Code (Keep your working About rules here) --- */
+    /* --- About Page Code --- */
     .mission-vision-wrapper {
         display: flex !important;
         flex-direction: row !important;
@@ -1143,11 +1077,10 @@ body,
     }
 
 
-    /* --- Contact Page Tablet Code (MUST STAY INSIDE THESE BRACKETS) --- */
+    /* --- Contact Page Tablet Code --- */
     section.contact.section.container {
         display: flex !important;
         flex-direction: row !important;
-        /* Side-by-side only on tablet/desktop */
         justify-content: space-between;
         align-items: flex-start;
         gap: 48px;
@@ -1159,22 +1092,20 @@ body,
     .contact__header {
         flex: 1;
         text-align: left !important;
-        /* Left aligned on tablet */
         margin-bottom: 0 !important;
     }
 
-        .contact__header h1 {
-            color: var(--primary-dark-blue);
-            font-size: 32px;
-            margin-bottom: 16px;
-            font-family: 'Public Sans';
-            font-style: normal;
-            font-weight: 300;
+    .contact__header h1 {
+        color: var(--primary-dark-blue);
+        font-size: 32px;
+        margin-bottom: 16px;
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 300;
             /* font-size: 40px; */
-            line-height: 120%;
-        }
+        line-height: 120%;
+    }
     
-
 
     /* .contact__header h1 {
         font-size: 40px !important;
@@ -1223,10 +1154,7 @@ body,
         border-radius: 4px;
     }
 
-    /* ==========================================
-         4. CAREERS PAGE TABLET DESIGN (768px)
-     ========================================== */
-    /* --- Careers Page Header Tablet Layout --- */
+    /* 4. CAREERS PAGE TABLET DESIGN (768px) */
     .careers.section.container{
         max-width: 580px !important;
         margin: 0 auto !important;
@@ -1288,43 +1216,38 @@ body,
     }
 
         /* --- Tablets Job Card Uniform Vertical Stack --- */
-        .job-card {
-            display: flex;
-            flex-direction: column;
-            /* Stacks everything vertically down the same line */
-            align-items: center;
-            /* Aligns all text and buttons perfectly to the left */
-            gap: 16px;
-            background: var(--white);
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    .job-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        background: var(--white);
+        padding: 32px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
             width: 100%;
-        }
+    }
     
-        .job-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-            /* Clean gap between title and engineering text */
-        }
+    .job-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
     
-        .job-info h3,
-        .job-info p {
-            margin: 0px;
-            /* Removes messy default layout margins completely */
-            text-align: center;
-        }
+    .job-info h3,
+    .job-info p {
+        margin: 0px;
+        text-align: center;
+    }
     
-        /* Adjust the button behavior inside tablet stack */
-        .job-apply-btn {
-            width: auto !important;
-            /* Keeps the button from stretching to full card width */
-            padding: 12px 36px;
-            text-align: center;
-            font-size: 14px;
-        }
+  
+    .job-apply-btn {
+        width: auto !important;
+        padding: 12px 36px;
+        text-align: center;
+        font-size: 14px;
+    }
 
     /* .job-card{
         display: flex !important;
@@ -1361,19 +1284,16 @@ body,
     /* TABLET & MOBILE ONLY: Adjusts Article Grid */
     @media (max-width: 768px) {
         .articles-grid {
-            grid-template-columns: 1fr 1fr;
-                /* 2 columns for Tablet */
+            grid-template-columns: 1fr 1fr; /* 2 columns for Tablet */
         }
     }
     
     @media (max-width: 480px) {
         .articles-grid {
-            grid-template-columns: 1fr;
-                /* 1 column for Mobile */
+            grid-template-columns: 1fr; /* 1 column for Mobile */
         }
     }
 
-    /* Responsive Headings */
     h1,.h1 {
         font-size: 40px;
         font-weight: 700;
@@ -1391,13 +1311,13 @@ body,
         font-weight: 400;
     }
     
-    /* Apply specific consistency to the requested sections */
     .about h2, .contact h2, .blog h2,
     .careers h2, .about h1, .contact h1,
     .blog h1, .careers h1 {
         font-family: "Public Sans", sans-serif;
         text-align: left;
     }
-}
+
+
 
  

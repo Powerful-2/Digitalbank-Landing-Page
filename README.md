@@ -127,7 +127,7 @@ The user interface layer completely isolates style tracking across separate casc
 
 ---
 
-## 🔧 Production Layout Bugs Resolved & Code Refactors (camelCase)
+## Production Layout Bugs Resolved & Code Refactors (camelCase)
 
 ### 🚨 1. Eradicating Fixed-Header Content Layout Collapse
 * The Bug: Because the header container relies on a fixed document layer (`position: fixed; height: 64px;`), it was pulled from the browser's standard layout tree. This caused subpage contents across `about.html` and `careers.html` to collapse beneath the navbar layer, turning headings invisible.
@@ -143,7 +143,7 @@ The user interface layer completely isolates style tracking across separate casc
   }
   ```
 
-### 🚨 2. Standardizing the Typography Scale & Eliminating Script Creep
+### 2. Standardizing the Typography Scale & Eliminating Script Creep
 * The Bug: Diverse external decorative script links (such as `Fredericka the Great`) leaked into subpage layout files. This metadata noise, paired with random inline styles, caused heading modules to warp across page tabs, breaking banking brand rules.
 * The Code Refactor: Removed all conflicting script wrappers. Unified the text engine to load the crisp **Public Sans** font family globally, forcing the compiler to respect strict structural weights:
   ```css
@@ -155,7 +155,7 @@ The user interface layer completely isolates style tracking across separate casc
   h3 { font-size: 20px; line-height: 24px; font-weight: 600; color: var(--primary-dark-blue); }
   ```
 
-### 🚨 3. Upgrading the Careers List Dashboard Component
+### 3. Upgrading the Careers List Dashboard Component
 * The Bug: Job board link boxes inside `careers.html` recycled global header styles (`.request-invite-btn`), causing buttons to stretch unevenly based on layout row lengths. Furthermore, the cards expanded across the entire browser pane on wide desktops, damaging visual hierarchy.
 * The Code Refactor: Isolated the cards into an independent component system (`.job-card` and `.job-apply-btn`). We capped layout maximum dimensions using auto-margins and updated structural layouts from horizontal stretches to elegant, centered columns:
   ```css
@@ -173,7 +173,6 @@ The user interface layer completely isolates style tracking across separate casc
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   }
-  ```
 
 ---
 
@@ -186,16 +185,16 @@ The user interface layer completely isolates style tracking across separate casc
 
 ---
 
-## 🔐 Mock Authentication Layer Details
+## Mock Authentication Layer Details
 
 The platform simulates a secure enterprise dashboard system. To check credential processing logic across `login.html` and `signup.html`, evaluate the application using these parameters:
 
 * Demo Username Login: |john@gmail.com|
-* **Demo Security Password: |password123|
+* Demo Security Password: |password123|
 
 ---
 
-## 📥 Local Deployment Framework
+## Local Deployment Framework
 1. Copy this project repository directory to your local development computer.
 2. Launch your terminal environment, move into the directory root, and ensure your system configuration paths align.
 3. Launch via your code editor's Live Server plugin (`http://127.0.0`).
