@@ -107,7 +107,7 @@ To maximize performance metrics, lower page payload sizes, and guarantee lightni
 
 ---
 
-## Component Architecture & Page Layout Blueprint (PascalCase)
+## Component Architecture & Page Layout Blueprint
 
 The user interface layer completely isolates style tracking across separate cascading files to eliminate code fragmentation and allow easy maintenance.
 
