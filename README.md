@@ -95,7 +95,7 @@ A comprehensive, multi-page web application engineered to model a next-generatio
 
 ---
 
-## 🛠️ THE_SYSTEM_STACK_AND_CONSTRAINTS (SCREAMING_SNAKE_CASE)
+## THE_SYSTEM_STACK_AND_CONSTRAINTS (SCREAMING_SNAKE_CASE)
 
 To maximize performance metrics, lower page payload sizes, and guarantee lightning-fast load times, this project rejects heavy frameworks in favor of a optimized native structural pipeline:
 
