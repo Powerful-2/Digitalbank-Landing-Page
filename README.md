@@ -107,11 +107,11 @@ To maximize performance metrics, lower page payload sizes, and guarantee lightni
 
 ---
 
-## 📐 Component Architecture & Page Layout Blueprint (PascalCase)
+## Component Architecture & Page Layout Blueprint (PascalCase)
 
 The user interface layer completely isolates style tracking across separate cascading files to eliminate code fragmentation and allow easy maintenance.
 
-### 📋 Core Platform Directory Mapping
+### Core Platform Directory Mapping
 * `index.html` ➡️ Primary conversion funnel featuring responsive value proposition matrices and latest article grid arrays.
 * `about.html` ➡️ Organizational overview panel utilizing structured main wrapper layers to isolate text flow.
 * `careers.html` ➡️ Interactive recruitment job board optimized with centered variable dashboard cards.
@@ -120,7 +120,7 @@ The user interface layer completely isolates style tracking across separate casc
 * `login.html` ➡️ Protected authentication gateway equipped with demo credential evaluation frameworks.
 * `signup.html` ➡️ New account registration view complete with defensive length validation checks.
 
-### 🗂️ Stylesheet Layout Progression Lifecycle
+### Stylesheet Layout Progression Lifecycle
 * `style.css` ➡️ Handles core root design system definitions, global text scale constraints, and base phone viewports up to 767px.
 * `tablets.css` ➡️ Automatically injects flex-wrap properties and content-squeezing containers between 768px and 1439px.
 * `desktop.css` ➡️ Executes premium widescreen alignment grids and fluid horizontal expansions from 1440px upward.
