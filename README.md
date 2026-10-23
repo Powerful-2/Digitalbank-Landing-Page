@@ -87,7 +87,7 @@ Users should be able to:
 
 # 🏦 Digitalbank - Enterprise High-Fidelity Landing Page Portal
 
-A comprehensive, multi-page web application engineered to model a next-generation neo-banking platform. This system refactors a standard frontend challenge into a fully production-ready interface by implementing a mobile-first responsive architecture, defensive JavaScript logic layers, complete client-side asynchronous form automation, and an advanced Search Engine Optimization (SEO) structural suite.
+A comprehensive, multi-page web application engineered to model a next-generation neo-banking platform. This is a standard front end problem reworked into a fully production ready interface. It's built on a mobile first responsive architecture, has defensive layers of JavaScript, complete client side asynchronous form automation and a full suite of SEO structural elements.
 
 🌐 Production Live Link: [Launch Digitalbank Web Portal](https://powerful-2.github.io/Digitalbank-Landing-Page/)  
 
